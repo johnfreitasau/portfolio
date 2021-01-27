@@ -64,7 +64,6 @@ const Index = () => (
         bgClip="text"
         fontSize="7xl"
         fontWeight="extrabold"
-        fontFamily="Inter"
       >I'm John.</Heading>
       {/* <Heading fontSize="6vw">{row1}</Heading> */}
       {/* <Heading fontSize="6vw">{row2}</Heading> */}
