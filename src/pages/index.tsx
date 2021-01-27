@@ -1,5 +1,8 @@
 import {
   Link as ChakraLink,
+  Flex,
+  Stack,
+  Heading,
   Text,
   Code,
   List,
@@ -12,14 +15,62 @@ import { Hero } from '../components/Hero'
 import { Container } from '../components/Container'
 import { Main } from '../components/Main'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
+// import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
 
 const Index = () => (
+  // <Container height="100vh">
   <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text>
+    <header>
+      <h1>John Logo</h1>
+      {/* <nav>
+        <li><a ref='#'>Home</a></li>
+        <li><a ref='#'>About</a></li>
+        <li><a ref='#'>Projects</a></li>
+        <li><a ref='#'>Journal</a></li>
+        <li><a ref='#'>Contact</a></li>
+      </nav> */}
+      <div className="right">
+        <a className="conf">
+          {/* <img src="assets/special-button.svg" alt="Special button"/> */}
+          <span>Special button</span>
+        </a>  
+
+          {/* <img src="assets/avatar.svg" alt="Avatar"/>   */}
+      </div>  
+    </header>
+
+    {/* <Hero /> */}
+    <Flex direction="column">
+    <Main maxWidth="104.8rem">
+      
+      {/* <Flex justifyContent="center" alignItems="center" height="100vh"> */}
+      <Stack spacing={6} alignItems="center" marginTop="500px" >
+      <Heading
+        as="span"
+        bgGradient="linear(to-l, #7928CA,#FF0080)"
+        bgClip="text"
+        fontSize="7xl"
+        fontWeight="extrabold"
+      >Hi there.</Heading>
+      <Heading
+        bgGradient="linear(to-l, #7928CA,#FF0080)"
+        bgClip="text"
+        fontSize="7xl"
+        fontWeight="extrabold"
+      >Welcome.</Heading>
+      <Heading
+        bgGradient="linear(to-l, #7928CA,#FF0080)"
+        bgClip="text"
+        fontSize="7xl"
+        fontWeight="extrabold"
+        fontFamily="Inter"
+      >I'm John.</Heading>
+      {/* <Heading fontSize="6vw">{row1}</Heading> */}
+      {/* <Heading fontSize="6vw">{row2}</Heading> */}
+      {/* <Heading fontSize="6vw">{row3}</Heading> */}
+    </Stack>
+      {/* <Text>
         Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
         <Code>typescript</Code>.
       </Text>
@@ -42,14 +93,15 @@ const Index = () => (
             Next.js <LinkIcon />
           </ChakraLink>
         </ListItem>
-      </List>
+      </List> */}
     </Main>
+    </Flex>
 
     <DarkModeSwitch />
     <Footer>
-      <Text>Next ❤️ Chakra</Text>
+      {/* <Text>Next ❤️ Chakra</Text> */}
     </Footer>
-    <CTA />
+    {/* <CTA /> */}
   </Container>
 )
 
