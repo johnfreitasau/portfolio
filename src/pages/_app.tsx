@@ -9,7 +9,7 @@ import {Fonts} from '../components/Fonts';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <Fonts />
+      {/* <Fonts /> */}
       <Global styles={global} />
       <Component {...pageProps} />
     </ChakraProvider>
