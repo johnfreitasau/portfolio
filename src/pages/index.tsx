@@ -14,7 +14,7 @@ import {
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
 import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
+import { Container } from '../components/Layout/Container';
 import { Main } from '../components/Main'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
@@ -68,30 +68,7 @@ const Index = () => {
 
   return (
   <Container height="100vh">
-    <header>
-      <h1>John Logo</h1>
-      <Flex direction="row">
-      <nav>
-        <ul>
-          <li><a href='#'>Home</a></li>
-          <li><a href='#'>About</a></li>
-          <li><a href='#'>Projects</a></li>
-          <li><a href='#'>Journal</a></li>
-          <li><a href='#'>Contact</a></li>
-        </ul>
-      </nav>
-      </Flex>
-      <div className="right">
-        <a className="conf">
-          {/* <img src="assets/special-button.svg" alt="Special button"/> */}
-          <span>Special button</span>
-        </a>
 
-          {/* <img src="assets/avatar.svg" alt="Avatar"/>   */}
-      </div>
-    </header>
-
-    {/* <Hero /> */}
     <Flex direction="column">
     <Main
     maxWidth="104.8rem"
@@ -99,6 +76,7 @@ const Index = () => {
     alignItems="center"
     justifyContent="center"
     p="5.6rem 2.4rem"
+    marginLeft="2rem"
     >
 
       {/* <Flex justifyContent="center" alignItems="center" height="100vh"> */}
@@ -131,6 +109,7 @@ const Index = () => {
         fontWeight="bold"
         letterSpacing="-.06em"
         animation={heading3Animation}
+        textAlign="right"
       >I'm John.</Heading>
             </Stack>
       <CTA />
