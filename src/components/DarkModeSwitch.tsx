@@ -12,6 +12,7 @@ export const DarkModeSwitch = () => {
       color="green"
       isChecked={isDark}
       onChange={toggleColorMode}
+      zIndex='docked'
     />
   )
 }

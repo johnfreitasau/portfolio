@@ -1,4 +1,4 @@
-import { Menu, MenuItem, MenuList,  } from '@chakra-ui/react';
+import { Menu, MenuItem, MenuList, HStack  } from '@chakra-ui/react';
 import { navigationItems } from '../../../constants/navigation';
 import { Link } from '../../Base/Link';
 
@@ -6,11 +6,26 @@ export function HeaderNavigation() {
 
   return (
     <>
-      { navigationItems.map(({name, href}) =>
+      <HStack
+        as='ul'
+        // display={['none', null, 'flex']}
+        spacing={4}
+        css={{ listStyle: 'none' }}
+      >
+        {
+          navigationItems.map(({ name, href }) => (
+            <li key={name}>
+              <Link href={href}>{name}</Link>
+            </li>
+          ))
+        }
+      </HStack>
+
+      {/* { navigationItems.map(({name, href}) =>
         <div key={name}>{name}</div>
       )}
       <Menu>
-        <MenuList>
+        <MenuList borderSize="1" borderColor="red">
         { navigationItems.map(({name, href}) =>
           <Link
             key={name}
@@ -20,6 +35,7 @@ export function HeaderNavigation() {
           >
             <MenuItem
               key={name}
+              borderSize="1" borderColor="red"
               _focus={{ backgroundColor: 'none' }}
               _hover={{ backgroundColor: 'unset' }}
             >
@@ -28,7 +44,7 @@ export function HeaderNavigation() {
           </Link>
         )}
         </MenuList>
-      </Menu>
+      </Menu> */}
     </>
   )
 }
