@@ -9,7 +9,8 @@ import {
   ListIcon,
   ListItem,
   keyframes,
-  usePrefersReducedMotion
+  usePrefersReducedMotion,
+  extendTheme
 } from '@chakra-ui/react'
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
@@ -19,6 +20,8 @@ import { Main } from '../components/Main'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
+import { ProjectsList } from '../components/ProjectsList';
+
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -123,6 +126,9 @@ const Index = () => {
         Hi! I'm Full Stack Developer and currently working as Senior Systems Engineer at @Canon Oceania.
         My learning is based on creating projects and contributing to the open source community.
       </Text>
+
+      <ProjectsList />
+
 
       <List spacing={3} my={0}>
         <ListItem>

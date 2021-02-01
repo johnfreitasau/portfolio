@@ -27,17 +27,17 @@ export function Header() {
       width='full'
       zIndex='docked'
       position='sticky'
-      // direction='column'
       backgroundColor={backgroundColor}
       height="64px"
-      borderBottom="0 -4px 0 0 red"
+      borderStyle="inset 0 -1px 0 0 rgba(0,0,0,0.1)"
+      // direction='column'
 
       // header-background: hsla(0,0%,100%,0.8);
       // header-border-bottom: inset 0 -1px 0 0 rgba(0,0,0,0.1);
 
     >
       <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={"-.1rem"}>
+        <Heading as="h1" size="lg" pl={3} letterSpacing={"-.1rem"}>
           John Freitas
         </Heading>
       </Flex>
@@ -64,14 +64,14 @@ export function Header() {
         <HeaderNavigation />
       </Box>
 
-      <Box
+      {/* <Box
         // display={{ base: show ? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
         <Button bg="transparent" border="1px">
           Create account
         </Button>
-      </Box>
+      </Box> */}
       {/* <Flex direction="row">
       <nav>
         <ul>
@@ -83,14 +83,14 @@ export function Header() {
         </ul>
       </nav>
       </Flex> */}
-      <div className="right">
+      {/* <div className="right">
         <a className="conf">
-          {/* <img src="assets/special-button.svg" alt="Special button"/> */}
+          <img src="assets/special-button.svg" alt="Special button"/>
           <span>Special button</span>
         </a>
 
-          {/* <img src="assets/avatar.svg" alt="Avatar"/>   */}
-      </div>
+          <img src="assets/avatar.svg" alt="Avatar"/>
+      </div> */}
     </Flex>
 )}
 

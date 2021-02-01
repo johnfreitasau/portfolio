@@ -21,6 +21,7 @@ const theme = extendTheme({
     bold: 800,
   },
   breakpoints,
+
 })
 
 export default theme

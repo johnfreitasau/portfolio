@@ -51,7 +51,7 @@ export const CTA = () => (
           w="200px"
           h="50px"
         >
-          Create account
+          Get in touch
         </Button>
 
 
