@@ -21,6 +21,9 @@ import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
 import { ProjectsList } from '../components/ProjectsList';
+import { GetStaticProps } from 'next';
+import { GraphQLClient } from 'graphql-request';
+import { getProjects } from '../graphql/queries/getProjects';
 
 
 const animatedGradientTitle1 = keyframes`
@@ -53,7 +56,7 @@ const animatedGradientTitle3 = keyframes`
 	}
 `;
 
-const Index = () => {
+const Index = ({projects}) => {
 
   const prefersReducedMotion = usePrefersReducedMotion()
 
@@ -127,7 +130,7 @@ const Index = () => {
         My learning is based on creating projects and contributing to the open source community.
       </Text>
 
-      <ProjectsList />
+      <ProjectsList projects={projects}/>
 
 
       <List spacing={3} my={0}>
@@ -160,3 +163,19 @@ const Index = () => {
 )}
 
 export default Index
+
+
+export const getStaticProps: GetStaticProps = async () => {
+
+  console.log('chegou aqui')
+
+  const projects = await getProjects();
+
+  console.log('PROJECTS:',projects)
+
+  return {
+    props: {
+      projects
+    }
+  }
+}

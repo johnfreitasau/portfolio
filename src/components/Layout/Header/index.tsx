@@ -38,7 +38,7 @@ export function Header() {
     >
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg" pl={3} letterSpacing={"-.1rem"}>
-          John Freitas
+          JF
         </Heading>
       </Flex>
 
