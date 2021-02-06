@@ -1,7 +1,8 @@
-import React from 'react';
-import {Badge, Box, Heading, Popover, SimpleGrid, VStack} from '@chakra-ui/react';
+import React, { useMemo } from 'react';
+import {ImGithub} from 'react-icons/im';
+import {  Link as ChakraLink,Badge, Box, Heading, Popover, SimpleGrid, VStack, Wrap, WrapItem} from '@chakra-ui/react';
 import { ProjectsListProps } from './types';
-import { InfoIcon, StarIcon } from '@chakra-ui/icons';
+import { InfoIcon, LinkIcon, StarIcon, git } from '@chakra-ui/icons';
 import { GraphQLClient } from 'graphql-request';
 import { GetStaticProps } from 'next';
 import { isCompositeType } from 'graphql';
@@ -52,13 +53,39 @@ export function ProjectsList({projects}) {
 
 {/**/}
 {projects.map(project => (
-  <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-      <Box p="6">
+  <Box maxW="sm" borderRadius="lg" overflow="hidden" boxShadow="2xl" rounded="md" borderWidth="1px" borderColor="white">
+      <Box p="6" >
+      <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          mb={3}
+          isTruncated
+        >
+          {project.title}
+          <ChakraLink
+            isExternal
+            href="https://github.com/johnfreitasau/gobarber-web"
+            // flexGrow={1}
+            // mr={2}
+          >
+            <ImGithub />
+          </ChakraLink>
+        </Box>
         <Box d="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
-            {project.stack}
-          </Badge>
-          <Box
+            {project.stack.categories.map(category =>
+              <Wrap spacing={1} marginBottom='auto'>
+              <WrapItem key={category.id}>
+              <Badge borderRadius="full" px="2" colorScheme="teal" variant='subtle' mr={1}>
+                {category.name}
+              </Badge>
+              </WrapItem>
+              </Wrap>
+            )}
+
+        </Box>
+        {/* <Box
             color="gray.500"
             fontWeight="semibold"
             letterSpacing="wide"
@@ -67,37 +94,27 @@ export function ProjectsList({projects}) {
             ml="2"
           >
             {property.beds} beds &bull; {property.baths} baths
-          </Box>
-        </Box>
+          </Box> */}
 
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          isTruncated
-        >
-          {project.title}
-        </Box>
 
-        <Box>
+        {/* <Box>
           {property.formattedPrice}
           <Box as="span" color="gray.600" fontSize="sm">
             / wk
           </Box>
-        </Box>
+        </Box> */}
 
         <Box d="flex" mt="2" alignItems="center">
-          {Array(5)
+          {/* {Array(5)
             .fill("")
             .map((_, i) => (
               <StarIcon
                 key={i}
                 color={i < property.rating ? "teal.500" : "gray.300"}
               />
-            ))}
+            ))} */}
           <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            {property.reviewCount} reviews
+            {project.description}
           </Box>
         </Box>
       </Box>

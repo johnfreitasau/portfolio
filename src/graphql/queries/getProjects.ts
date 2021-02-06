@@ -12,11 +12,19 @@ query projects {
     image
     liveUrl
     publishedAt
-    stack
+
     stage
     title
     githubUrl
     description
+    stack {
+      id
+      framework
+      categories {
+        id
+        name
+      }
+    }
   }
 }
 `;
