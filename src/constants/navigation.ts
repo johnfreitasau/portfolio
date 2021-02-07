@@ -12,6 +12,10 @@ export const navigationItems = [
     href: '/projects'
   },
   {
+    name: 'Skills',
+    href: '/skills'
+  },
+  {
     name: 'Contact',
     href: '/contact'
   }

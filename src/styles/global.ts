@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 //import { colors } from './theme/colors'
 
 export const global = css`
+
   @font-face {
     font-family: 'Inter';
     font-style: normal;

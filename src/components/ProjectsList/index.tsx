@@ -35,9 +35,9 @@ export function ProjectsList({projects}) {
     <VStack
     width='full'
     spacing={5}
-    alignItems='flex-start'
+    // alignItems='flex-start'
   >
-    <Heading as='h2' paddingTop={10}>
+    <Heading as='h2' paddingTop={10} textAlign="center">
     Projects
     {/* <Popover
       // popoverText={popoverText}
@@ -53,7 +53,7 @@ export function ProjectsList({projects}) {
 
 {/**/}
 {projects.map(project => (
-  <Box maxW="sm" borderRadius="lg" overflow="hidden" boxShadow="2xl" rounded="md" borderWidth="1px" borderColor="white">
+  <Box maxW="sm" borderRadius="lg" overflow="hidden" boxShadow="2xl" rounded="md" borderWidth="1px" borderColor="white" alignItems='flex-start'>
       <Box p="6" >
       <Box
           mt="1"

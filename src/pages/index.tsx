@@ -5,6 +5,9 @@ import {
   Heading,
   Text,
   Code,
+  Button,
+  Box,
+  Image,
   List,
   ListIcon,
   ListItem,
@@ -12,7 +15,8 @@ import {
   usePrefersReducedMotion,
   extendTheme
 } from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon, ChevronUpIcon, LinkIcon } from '@chakra-ui/icons'
+import {FiChevronUp} from 'react-icons/fi';
 
 import { Hero } from '../components/Hero'
 import { Container } from '../components/Layout/Container';
@@ -24,6 +28,7 @@ import { ProjectsList } from '../components/ProjectsList';
 import { GetStaticProps } from 'next';
 import { GraphQLClient } from 'graphql-request';
 import { getProjects } from '../graphql/queries/getProjects';
+import { useCallback } from 'react';
 
 
 const animatedGradientTitle1 = keyframes`
@@ -56,7 +61,13 @@ const animatedGradientTitle3 = keyframes`
 	}
 `;
 
+
+
 const Index = ({projects}) => {
+
+  function scrollTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  }
 
   const prefersReducedMotion = usePrefersReducedMotion()
 
@@ -72,8 +83,29 @@ const Index = ({projects}) => {
     ? undefined
     : `${animatedGradientTitle3} 10s ease-in-out infinite`
 
+
+
   return (
   <Container height="100vh">
+    <Button
+      position="fixed"
+      h="45px"
+      w="45px"
+      backgroundColor="brimson"
+      right="50px"
+      bottom="50px"
+      ta="center"
+      lh="45px"
+      z-index={9999}
+      borderRadius="6px"
+      cursor="pointer"
+      // opacity={0}
+      pointer-event="none"
+      transition="all 0.3s ease"
+      onClick={scrollTop}
+    >
+      <ChevronUpIcon />
+    </Button>
 
     <Flex direction="column">
     <Main
@@ -126,9 +158,54 @@ const Index = ({projects}) => {
       letterSpacing="-0.02rem"
       textAlign="center"
       >
-        Hi! I'm Full Stack Developer and currently working as Senior Systems Engineer at @Canon Oceania.
-        My learning is based on creating projects and contributing to the open source community.
+        Hello! I'm full-stack developer. I'm working as SR Systems Engineer at @Canon Oceania.
+        My learning as a developer today is based on creating projects and contributing to the open source community.
       </Text>
+
+      {/* About section start */}
+      <section id="about">
+        <div id="maxWidth">
+        <Heading
+          as='h2'
+          paddingTop={10}
+          textAlign="center"
+          mb="50"
+          >About me</Heading>
+
+          <Flex
+            id="about-content"
+            flexWrap="wrap"
+            alignItems="center"
+            justifyContent="space-between"
+            >
+            <Box id="column-left"
+              width="45%"
+            >
+              <Image src="https://avatars.githubusercontent.com/u/44829778?s=460&u=d78ee0395a879c432ea3dbde78dfc3f9bb0d50ac&v=4"
+              alt="me"
+              boxSize="300px"
+              objectFit="cover"
+              borderRadius="15%"
+              />
+
+            </Box>
+            <Box
+              id="column-right"
+              width="55%"
+              >
+
+                <Text
+                  fontSize="24px"
+                  fontWeight="700"
+                  >I'm John Freitas</Text>
+                  <p>Hello! I'm full-stack developer. I'm working as SR Systems Engineer at @Canon Oceania.
+                    My learning as a developer today is based on creating projects and contributing to the open source community.</p>
+            </Box>
+          </Flex>
+        </div>
+
+      </section>
+
 
       <ProjectsList projects={projects}/>
 
@@ -156,6 +233,7 @@ const Index = ({projects}) => {
     </Flex>
 
     <DarkModeSwitch />
+
     <Footer>
       {/* <Text>Next ❤️ Chakra</Text> */}
     </Footer>

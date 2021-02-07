@@ -4,18 +4,18 @@ import { Container } from './Layout/Container'
 
 export const CTA = () => (
   <Container
-    flexDirection="row"
-    // position="fixed"
-    // bottom="0"
-    width="100%"
-    maxWidth="48rem"
+    // flexDirection="row"
+    // // position="fixed"
+    // // bottom="0"
+    // width="100%"
+    // maxWidth="48rem"
     py={2}
     alignContent="center"
     alignItems="center"
     justifyItems="center"
     justifyContent="center"
-    border={1}
-    borderColor="red"
+    // border={1}
+    // borderColor="red"
   >
 
     <ChakraLink
@@ -24,6 +24,8 @@ export const CTA = () => (
       flexGrow={1}
       mx={2}v
       w="200px" h="50px"
+      _hover={{ textDecoration: 'none' }}
+
 
     >
       {/* <Button width="100%" variant="solid" colorScheme="green"> */}
@@ -31,7 +33,7 @@ export const CTA = () => (
         Discover more
       </Button>
     </ChakraLink>
-    <ChakraLink isExternal href="https://chakra-ui.com"
+    <ChakraLink isExternal href="https://chakra-ui.com" _hover={{ textDecoration: 'none' }}
     // flexGrow={1} mx={2}
     >
       {/* <Button
