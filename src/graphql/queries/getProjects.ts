@@ -3,34 +3,32 @@ import { gql } from 'graphql-request';
 import { graphQLClient } from '../../config/graphQLClient';
 import { Project } from '../schema';
 
-
-
 const GET_PROJECTS_QUERY = gql`
-query projects {
-  projects {
-    id
-    image
-    liveUrl
-    publishedAt
-
-    stage
-    title
-    githubUrl
-    description
-    stack {
+  query projects {
+    projects {
       id
-      framework
-      categories {
+      image
+      liveUrl
+      publishedAt
+
+      stage
+      title
+      githubUrl
+      description
+      stack {
         id
-        name
+        framework
+        categories {
+          id
+          name
+        }
       }
     }
   }
-}
 `;
 
-export async function getProjects () {
-  const { projects } = await graphQLClient.request(GET_PROJECTS_QUERY)
+export async function getProjects() {
+  const { projects } = await graphQLClient.request(GET_PROJECTS_QUERY);
 
-  return projects as Array<Project>
+  return projects as Array<Project>;
 }
