@@ -1,12 +1,12 @@
-import { Global } from '@emotion/react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Global } from '@emotion/react';
+import { ChakraProvider } from '@chakra-ui/react';
 
-import theme from '../theme'
-import { AppProps } from 'next/app'
+import theme from '../theme';
+import { AppProps } from 'next/app';
 import { global } from '../styles/global';
-import {Fonts} from '../components/Fonts';
+// import {Fonts} from '../components/Fonts';
 
-import {Layout} from '../components/Layout';
+import { Layout } from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -4,23 +4,12 @@ import { Container } from './Layout/Container';
 
 export const CTA = () => (
   <Container
-    // flexDirection="row"
-    // // position="fixed"
-    // // bottom="0"
-    // width="100%"
-    // maxWidth="48rem"
     py={2}
-    // alignContent="center"
-    // alignItems="center"
-    // justifyItems="center"
-    // justifyContent="center"
     display="flex"
     justifyContent="center"
     justifyItems="center"
-    // border={1}
-    // borderColor="red"
   >
-    <ChakraLink
+    {/* <ChakraLink
       isExternal
       href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript"
       flexGrow={1}
@@ -30,7 +19,6 @@ export const CTA = () => (
       h="50px"
       _hover={{ textDecoration: 'none' }}
     >
-      {/* <Button width="100%" variant="solid" colorScheme="green"> */}
       <Button
         width="100%"
         variant="solid"
@@ -41,26 +29,15 @@ export const CTA = () => (
       >
         Discover more
       </Button>
-    </ChakraLink>
+    </ChakraLink> */}
     <ChakraLink
       isExternal
       href="https://chakra-ui.com"
       _hover={{ textDecoration: 'none' }}
       // flexGrow={1} mx={2}
     >
-      {/* <Button
-        width="100%"
-        variant="outline"
-        bg="transparent"
-        border={1}
-        colorScheme="green"
-        w="200px" h="50px"
-      >
-        About me
-      </Button> */}
-
       <Button bg="transparent" border="1px" w="200px" h="50px">
-        Get in touch
+        Discover more ->
       </Button>
     </ChakraLink>
   </Container>

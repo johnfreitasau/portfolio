@@ -19,10 +19,12 @@ import { Container } from '../components/Layout/Container';
 import { Main } from '../components/Main';
 import { DarkModeSwitch } from '../components/DarkModeSwitch';
 import { CTA } from '../components/CTA';
-import { Footer } from '../components/Footer';
+// import { Footer } from '../components/Footer';
+
 import { ProjectsList } from '../components/ProjectsList';
 import { GetStaticProps } from 'next';
 import { getProjects } from '../graphql/queries/getProjects';
+import { Footer } from '../components/Layout/Footer';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -109,7 +111,7 @@ const Index = ({ projects }) => {
             <Heading
               bgGradient="linear(90deg, #007Cf0,#00DFD8)"
               bgClip="text"
-              fontSize="8rem"
+              fontSize="9vw"
               lineHeight="1"
               fontWeight="bold"
               letterSpacing="-.06em"
@@ -120,7 +122,7 @@ const Index = ({ projects }) => {
             <Heading
               bgGradient="linear(90deg,#7928CA,#FF0080)"
               bgClip="text"
-              fontSize="8rem"
+              fontSize="9vw"
               lineHeight="1"
               fontWeight="bold"
               letterSpacing="-.06em"
@@ -131,7 +133,7 @@ const Index = ({ projects }) => {
             <Heading
               bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
               bgClip="text"
-              fontSize="8rem"
+              fontSize="9vw"
               lineHeight="1"
               fontWeight="bold"
               letterSpacing="-.06em"
@@ -242,7 +244,7 @@ const Index = ({ projects }) => {
 
       <DarkModeSwitch />
 
-      <Footer>{/* <Text>Next ❤️ Chakra</Text> */}</Footer>
+      {/* <Footer><Text>Next ❤️ Chakra</Text></Footer> */}
     </Container>
   );
 };
