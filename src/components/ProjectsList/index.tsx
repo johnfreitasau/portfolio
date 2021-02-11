@@ -27,7 +27,7 @@ import { Project } from '../../graphql/schema';
 // }
 
 export function ProjectsList({ projects }) {
-  console.log('PROJECTS_UNDER_PROJECTSLIST:', projects);
+  // console.log('PROJECTS_UNDER_PROJECTSLIST:', projects);
 
   const property = {
     imageUrl: 'https://bit.ly/2Z4KKcF',

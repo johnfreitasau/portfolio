@@ -14,7 +14,10 @@ export const global = css`
       U+2215, U+FEFF, U+FFFD;
   }
 
-  html,
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     padding: 0;
     margin: 0;

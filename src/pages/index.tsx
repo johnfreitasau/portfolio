@@ -21,6 +21,7 @@ import { DarkModeSwitch } from '../components/DarkModeSwitch';
 import { CTA } from '../components/CTA';
 // import { Footer } from '../components/Footer';
 
+import { Contact } from '../components/Contact';
 import { ProjectsList } from '../components/ProjectsList';
 import { GetStaticProps } from 'next';
 import { getProjects } from '../graphql/queries/getProjects';
@@ -76,7 +77,7 @@ const Index = ({ projects }) => {
     : `${animatedGradientTitle3} 10s ease-in-out infinite`;
 
   return (
-    <Container height="100vh">
+    <Container height="100vh" id="home">
       <Button
         position="fixed"
         h="45px"
@@ -156,7 +157,7 @@ const Index = ({ projects }) => {
             creating projects and contributing to the open source community.
           </Text>
 
-          {/* About section start */}
+          {/* Section about */}
           <section id="about">
             <div id="maxWidth">
               <Heading as="h2" paddingTop={10} textAlign="center" mb="50">
@@ -201,7 +202,9 @@ const Index = ({ projects }) => {
               </Box>
             </div>
           </section>
-          <Box>
+
+          {/* Section Skills */}
+          <Box id="skills">
             <Heading as="h2" paddingTop={10} textAlign="center" mb="50">
               Skills
             </Heading>
@@ -213,9 +216,14 @@ const Index = ({ projects }) => {
             </p>
           </Box>
 
-          <ProjectsList projects={projects} />
-
-          <List spacing={3} my={0}>
+          {/* Section Projects */}
+          <section id="projects">
+            <ProjectsList projects={projects} />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+          {/* <List spacing={3} my={0}>
             <ListItem>
               <ListIcon as={CheckCircleIcon} color="green.500" />
               <ChakraLink
@@ -238,7 +246,7 @@ const Index = ({ projects }) => {
                 Next.js <LinkIcon />
               </ChakraLink>
             </ListItem>
-          </List>
+          </List> */}
         </Main>
       </Flex>
 
@@ -256,7 +264,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const projects = await getProjects();
 
-  console.log('PROJECTS:', projects);
+  // console.log('PROJECTS:', projects);
 
   return {
     props: {
