@@ -25,7 +25,7 @@ import { Contact } from '../components/Contact';
 import { ProjectsList } from '../components/ProjectsList';
 import { GetStaticProps } from 'next';
 import { getProjects } from '../graphql/queries/getProjects';
-import { Footer } from '../components/Layout/Footer';
+// import { Footer } from '../components/Layout/Footer';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -57,7 +57,7 @@ const animatedGradientTitle3 = keyframes`
 	}
 `;
 
-const Index = ({ projects }) => {
+export default function Index({ projects }) {
   function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -77,7 +77,7 @@ const Index = ({ projects }) => {
     : `${animatedGradientTitle3} 10s ease-in-out infinite`;
 
   return (
-    <Container height="100vh" id="home">
+    <Container id="home">
       <Button
         position="fixed"
         h="45px"
@@ -87,65 +87,71 @@ const Index = ({ projects }) => {
         bottom="50px"
         ta="center"
         lh="45px"
-        z-index={9999}
         borderRadius="6px"
         cursor="pointer"
         // opacity={0}
         pointer-event="none"
         transition="all 0.3s ease"
         onClick={scrollTop}
+        z-index={1}
       >
         <ChevronUpIcon />
       </Button>
 
       <Flex direction="column">
-        <Main
+        {/* <Main
           maxWidth="104.8rem"
           flex="1"
           alignItems="center"
           justifyContent="center"
           p="5.6rem 2.4rem"
           marginLeft="2rem"
+        > */}
+        {/* <Flex justifyContent="center" alignItems="center" height="100vh"> */}
+        <Stack
+          spacing={6}
+          alignItems="center"
+          height="100vh"
+          justifyContent="center"
         >
-          {/* <Flex justifyContent="center" alignItems="center" height="100vh"> */}
-          <Stack spacing={6} alignItems="center" marginTop="330px">
-            <Heading
-              bgGradient="linear(90deg, #007Cf0,#00DFD8)"
-              bgClip="text"
-              fontSize="9vw"
-              lineHeight="1"
-              fontWeight="bold"
-              letterSpacing="-.06em"
-              animation={heading1Animation}
-            >
-              Hi there.
-            </Heading>
-            <Heading
-              bgGradient="linear(90deg,#7928CA,#FF0080)"
-              bgClip="text"
-              fontSize="9vw"
-              lineHeight="1"
-              fontWeight="bold"
-              letterSpacing="-.06em"
-              animation={heading2Animation}
-            >
-              Welcome.
-            </Heading>
-            <Heading
-              bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
-              bgClip="text"
-              fontSize="9vw"
-              lineHeight="1"
-              fontWeight="bold"
-              letterSpacing="-.06em"
-              animation={heading3Animation}
-              textAlign="right"
-            >
-              I'm John.
-            </Heading>
-          </Stack>
+          <Heading
+            bgGradient="linear(90deg, #007Cf0,#00DFD8)"
+            bgClip="text"
+            fontSize="9vw"
+            lineHeight="1"
+            fontWeight="bold"
+            letterSpacing="-.06em"
+            animation={heading1Animation}
+          >
+            Hi there.
+          </Heading>
+          <Heading
+            bgGradient="linear(90deg,#7928CA,#FF0080)"
+            bgClip="text"
+            fontSize="9vw"
+            lineHeight="1"
+            fontWeight="bold"
+            letterSpacing="-.06em"
+            animation={heading2Animation}
+          >
+            Welcome.
+          </Heading>
+          <Heading
+            bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
+            bgClip="text"
+            fontSize="9vw"
+            lineHeight="1"
+            fontWeight="bold"
+            letterSpacing="-.06em"
+            animation={heading3Animation}
+            textAlign="right"
+          >
+            I'm John.
+          </Heading>
           <CTA />
-          <Text
+        </Stack>
+
+        {/* <Text
             mt="6.4rem"
             fontSize="1.25rem"
             fontWeight="normal"
@@ -155,75 +161,65 @@ const Index = ({ projects }) => {
             Hello! I'm full-stack developer. I'm working as SR Systems Engineer
             at @Canon Oceania. My learning as a developer today is based on
             creating projects and contributing to the open source community.
-          </Text>
+          </Text> */}
 
-          {/* Section about */}
-          <section id="about">
-            <div id="maxWidth">
-              <Heading as="h2" paddingTop={10} textAlign="center" mb="50">
-                About me
-              </Heading>
+        {/* Section about */}
+        <Container id="about" height="100vh" justifyContent="center">
+          <div id="maxWidth">
+            <Heading
+              as="h2"
+              paddingTop={10}
+              textAlign="center"
+              mb="50"
+              id="about"
+            >
+              About me
+            </Heading>
 
-              <Box p={4} display={{ md: 'flex' }} alignItems="center">
-                {/* <Flex
+            <Box p={4} display={{ md: 'flex' }} alignItems="center">
+              {/* <Flex
                   id="about-content"
                   flexWrap="wrap"
                   alignItems="center"
                   justifyContent="space-between"
                 > */}
-                <Box flexShrink={0} display="flex" justifyContent="center">
-                  <Image
-                    src="https://avatars.githubusercontent.com/u/44829778?s=460&u=d78ee0395a879c432ea3dbde78dfc3f9bb0d50ac&v=4"
-                    alt="me"
-                    // boxSize="300px"
-                    // objectFit="cover"
-                    // borderRadius="15%"
-                    borderRadius="lg"
-                    width={{ base: 500, sm: 400, md: 300 }}
-                  />
-                </Box>
-                <Box
-                  id="column-right"
-                  // width="55%"
-                  mt={{ base: 4, md: 0 }}
-                  ml={{ md: 5 }}
-                >
-                  <Text fontSize="24px" fontWeight="700">
-                    I'm John Freitas
-                  </Text>
-                  <p>
-                    Hello! I'm full-stack developer. I'm working as SR Systems
-                    Engineer at @Canon Oceania. My learning as a developer today
-                    is based on creating projects and contributing to the open
-                    source community.
-                  </p>
-                </Box>
-                {/* </Flex> */}
+              <Box flexShrink={0} display="flex" justifyContent="center">
+                <Image
+                  src="https://avatars.githubusercontent.com/u/44829778?s=460&u=d78ee0395a879c432ea3dbde78dfc3f9bb0d50ac&v=4"
+                  alt="me"
+                  // boxSize="300px"
+                  // objectFit="cover"
+                  // borderRadius="15%"
+                  borderRadius="lg"
+                  width={{ base: 500, sm: 400, md: 300 }}
+                />
               </Box>
-            </div>
-          </section>
+              <Box
+                id="column-right"
+                // width="55%"
+                mt={{ base: 4, md: 0 }}
+                ml={{ md: 5 }}
+              >
+                <Text fontSize="24px" fontWeight="700">
+                  I'm John Freitas
+                </Text>
+                <p>
+                  Hello! I'm full-stack developer. I'm working as SR Systems
+                  Engineer at @Canon Oceania. My learning as a developer today
+                  is based on creating projects and contributing to the open
+                  source community.
+                </p>
+              </Box>
+              {/* </Flex> */}
+            </Box>
+          </div>
+        </Container>
 
-          {/* Section Skills */}
-          <Box id="skills">
-            <Heading as="h2" paddingTop={10} textAlign="center" mb="50">
-              Skills
-            </Heading>
-            <p>
-              Hello! I'm full-stack developer. I'm working as SR Systems
-              Engineer at @Canon Oceania. My learning as a developer today is
-              based on creating projects and contributing to the open source
-              community.
-            </p>
-          </Box>
-
-          {/* Section Projects */}
-          <section id="projects">
-            <ProjectsList projects={projects} />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
-          {/* <List spacing={3} my={0}>
+        {/* Section Projects */}
+        <Container id="projects" height="100vh" justifyContent="center">
+          <ProjectsList projects={projects} />
+        </Container>
+        {/* <List spacing={3} my={0}>
             <ListItem>
               <ListIcon as={CheckCircleIcon} color="green.500" />
               <ChakraLink
@@ -247,7 +243,21 @@ const Index = ({ projects }) => {
               </ChakraLink>
             </ListItem>
           </List> */}
-        </Main>
+        {/* </Main> */}
+        {/* Section Skills */}
+        <Container id="skills" height="100vh" justifyContent="center">
+          <Heading as="h2" paddingTop={10} textAlign="center" mb="50">
+            Skills
+          </Heading>
+          <p>
+            Hello! I'm full-stack developer. I'm working as SR Systems Engineer
+            at @Canon Oceania. My learning as a developer today is based on
+            creating projects and contributing to the open source community.
+          </p>
+        </Container>
+        {/* <section id="contact">
+          <Contact />
+        </section> */}
       </Flex>
 
       <DarkModeSwitch />
@@ -255,9 +265,7 @@ const Index = ({ projects }) => {
       {/* <Footer><Text>Next ❤️ Chakra</Text></Footer> */}
     </Container>
   );
-};
-
-export default Index;
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   console.log('chegou aqui');

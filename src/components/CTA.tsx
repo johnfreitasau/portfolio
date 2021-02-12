@@ -1,4 +1,5 @@
 import { Link as ChakraLink, Button } from '@chakra-ui/react';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 import { Container } from './Layout/Container';
 
@@ -31,13 +32,27 @@ export const CTA = () => (
       </Button>
     </ChakraLink> */}
     <ChakraLink
-      isExternal
-      href="https://chakra-ui.com"
-      _hover={{ textDecoration: 'none' }}
+      // isExternal
+      href="#about"
+      _hover={{
+        textDecoration: 'none',
+      }}
       // flexGrow={1} mx={2}
     >
-      <Button bg="transparent" border="1px" w="200px" h="50px">
-        Discover more ->
+      <Button
+        bg="transparent"
+        border="1px"
+        w="150px"
+        h="150px"
+        _hover={{
+          transform: 'rotateZ(90deg)',
+          width: '150px',
+          height: '150px',
+          borderRadius: '50%',
+        }}
+      >
+        Discover more
+        <ArrowForwardIcon />
       </Button>
     </ChakraLink>
   </Container>
