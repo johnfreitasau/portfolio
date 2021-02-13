@@ -1,64 +1,65 @@
-import { VStack, Box, Heading, Flex } from '@chakra-ui/react';
+import {
+  VStack,
+  Box,
+  Heading,
+  Text,
+  HStack,
+  useColorMode,
+  Link,
+} from '@chakra-ui/react';
 import {
   AiFillLinkedin,
   AiOutlineGithub,
   AiOutlineTwitter,
 } from 'react-icons/ai';
-import { Container } from '../Container';
 
 export function Footer() {
+  const { colorMode } = useColorMode();
+
+  const bgColor = { light: '#fafafa', dark: '#111' };
+
   return (
-    <Flex width="full" direction="column">
-      <Container>
-        <VStack
-          as="footer"
-          width="full"
-          spacing={4}
-          paddingY={8}
-          alignItems="center"
-          justifyContent="center"
+    <Box backgroundColor={bgColor[colorMode]} borderTopWidth={1}>
+      <VStack margin="2rem">
+        <Heading
+          size=".875rem"
+          width="100%"
+          fontWeight={400}
+          textAlign="center"
         >
-          <Flex
-            as="footer"
-            // bottom={0}
+          Connect with me on
+          <Box width="100%" marginBottom=".876rem">
+            <HStack spacing={5} justifyContent="center">
+              <Link
+                href="https://au.linkedin.com/in/john-freitas-368449191"
+                isExternal
+                _hover={{ color: '#fff', stroke: 'tomato' }}
+              >
+                <AiFillLinkedin size="1.475rem" />
+              </Link>
 
-            // width="full"
-            // zIndex="docked"
-            // position="sticky"
-            // height="64px"
-            // flexShrink={0}
-            // width="full"
-            // marginTop="auto"
-            // direction="column"
-            // borderTopWidth={1}
-            // css={{ background: '#6e6b6b' }}
-          >
-            <Box borderTopWidth={1} display="flex" width="full">
-              <Flex align="center" mr={5}>
-                <Heading
-                  pl={3}
-                  letterSpacing={'-.1rem'}
-                  size="xs"
-                  width="100%"
-                  maxWidth={420}
-                  textAlign="center"
-                >
-                  Let's keep in touch
-                  <AiFillLinkedin />
-                  <AiOutlineGithub />
-                  <AiOutlineTwitter />
-                </Heading>
-              </Flex>
+              <Link
+                href="https://github.com/johnfreitasau"
+                isExternal
+                _hover={{ color: '#fff', stroke: 'tomato' }}
+              >
+                <AiOutlineGithub size="1.475rem" />
+              </Link>
 
-              <Box
-                display={{ md: 'flex' }}
-                flexGrow={1}
-                justifyContent="center"
-              ></Box>
-            </Box>
-          </Flex>
-        </VStack>
-      </Container>
-    </Flex>
+              <Link
+                href="https://twitter.com/jfcfreitas"
+                isExternal
+                _hover={{ color: '#fff', stroke: 'tomato' }}
+              >
+                <AiOutlineTwitter size="1.475rem" />
+              </Link>
+            </HStack>
+          </Box>
+          <Text fontWeight={200} marginTop="0.876rem">
+            © 2021 John Freitas
+          </Text>
+        </Heading>
+      </VStack>
+    </Box>
   );
 }

@@ -10,34 +10,12 @@ export const CTA = () => (
     justifyContent="center"
     justifyItems="center"
   >
-    {/* <ChakraLink
-      isExternal
-      href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript"
-      flexGrow={1}
-      mx={2}
-      v
-      w="200px"
-      h="50px"
-      _hover={{ textDecoration: 'none' }}
-    >
-      <Button
-        width="100%"
-        variant="solid"
-        bgColor="#000"
-        color="white"
-        w="200px"
-        h="50px"
-      >
-        Discover more
-      </Button>
-    </ChakraLink> */}
     <ChakraLink
       // isExternal
       href="#about"
       _hover={{
         textDecoration: 'none',
       }}
-      // flexGrow={1} mx={2}
     >
       <Button
         bg="transparent"
