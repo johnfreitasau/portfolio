@@ -1,13 +1,5 @@
-import {
-  Link as ChakraLink,
-  Badge,
-  Box,
-  Wrap,
-  WrapItem,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Badge, Box, Wrap, WrapItem, useDisclosure } from '@chakra-ui/react';
 
-import { ImGithub } from 'react-icons/im';
 import ProjectModal from './ProjectModal';
 
 export default function Project({ project }) {
@@ -41,12 +33,6 @@ export default function Project({ project }) {
             isTruncated
           >
             {project.title}
-            {/* <ChakraLink
-            isExternal
-            href="https://github.com/johnfreitasau/gobarber-web"
-          >
-            <ImGithub />
-          </ChakraLink> */}
           </Box>
           <Box d="flex" alignItems="baseline">
             {project.stack.categories.map((category) => (

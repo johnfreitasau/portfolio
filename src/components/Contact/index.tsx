@@ -2,7 +2,6 @@ import { Formik, Form, Field } from 'formik';
 import {
   Heading,
   FormControl,
-  FormLabel,
   FormErrorMessage,
   Input,
   Button,
@@ -48,7 +47,6 @@ export function Contact() {
             <Field name="name" validate={validateName}>
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.name && form.touched.name}>
-                  {/* <FormLabel htmlFor="name">First name</FormLabel> */}
                   <Input {...field} id="name" placeholder="name" />
                   <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                 </FormControl>

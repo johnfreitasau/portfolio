@@ -1,10 +1,8 @@
 import {
-  Link as ChakraLink,
   Modal,
   ModalOverlay,
   ModalHeader,
   ModalContent,
-  useDisclosure,
   ModalCloseButton,
   ModalBody,
   ModalFooter,
@@ -19,10 +17,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
       <ModalContent>
         <ModalHeader>{project.title}</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
-          {/* <Lorem count={2} /> */}
-          {project.description}
-        </ModalBody>
+        <ModalBody>{project.description}</ModalBody>
 
         <ModalFooter>
           <Button colorScheme="blue" mr={3} onClick={onClose}>
