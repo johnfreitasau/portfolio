@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Heading, Flex, Link } from '@chakra-ui/react';
 import { HeaderNavigation } from './HeaderNavigation';
 import { DarkModeSwitch } from '../../DarkModeSwitch';
-import { Container } from '../Container';
 export function Header() {
   return (
     <Flex
@@ -20,8 +19,15 @@ export function Header() {
             jf.
           </Heading>
         </Flex>
-        <Box display={{ md: 'flex' }} flexGrow={1} justifyContent="center">
+        <Box
+          display={{ md: 'flex' }}
+          flexGrow={1}
+          justifyContent="center"
+          alignSelf="center"
+        >
           <HeaderNavigation />
+        </Box>
+        <Box>
           <DarkModeSwitch />
         </Box>
       </Box>
