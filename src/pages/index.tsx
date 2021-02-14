@@ -170,11 +170,11 @@ export default function Index({ projects }) {
           </div>
         </Container>
 
-        <Container id="projects" height="100vh" justifyContent="center">
+        <Container id="projects" justifyContent="center">
           <ProjectsList projects={projects} />
         </Container>
 
-        <Container id="skills" height="100vh" justifyContent="center">
+        <Container id="skills" justifyContent="center">
           <Heading as="h2" paddingTop={10} textAlign="center" mb="50">
             Skills
           </Heading>
@@ -185,7 +185,7 @@ export default function Index({ projects }) {
           </p>
         </Container>
       </Flex>
-      <DarkModeSwitch />
+      {/* <DarkModeSwitch /> */}
     </Container>
   );
 }

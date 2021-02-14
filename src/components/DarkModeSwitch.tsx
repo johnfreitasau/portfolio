@@ -6,8 +6,8 @@ export const DarkModeSwitch = () => {
   return (
     <Button
       position="fixed"
-      top="1rem"
-      right="1rem"
+      // top="1rem"
+      // right="1rem"
       isChecked={isDark}
       onClick={toggleColorMode}
       zIndex="docked"

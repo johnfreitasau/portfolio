@@ -6,7 +6,7 @@ export function ProjectsList({ projects }) {
   return (
     <VStack width="full" spacing={5}>
       <Heading as="h2" paddingTop={10} textAlign="center">
-        Projects
+        Recent Projects
       </Heading>
       <SimpleGrid columns={[1, null, 2]} spacing={10} width="full">
         {projects.map((project) => (
@@ -16,3 +16,4 @@ export function ProjectsList({ projects }) {
     </VStack>
   );
 }
+4;

@@ -19,7 +19,11 @@ export function Footer() {
   const bgColor = { light: '#fafafa', dark: '#111' };
 
   return (
-    <Box backgroundColor={bgColor[colorMode]} borderTopWidth={1}>
+    <Box
+      backgroundColor={bgColor[colorMode]}
+      borderTopWidth={1}
+      marginTop="50px"
+    >
       <VStack margin="2rem">
         <Heading
           size=".875rem"
