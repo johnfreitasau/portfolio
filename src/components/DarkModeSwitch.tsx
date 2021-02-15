@@ -5,12 +5,10 @@ export const DarkModeSwitch = () => {
   const isDark = colorMode === 'dark';
   return (
     <Button
-      // position="fixed"
-      top="1rem"
+      top=".725rem"
       right="1rem"
       isChecked={isDark}
       onClick={toggleColorMode}
-      // zIndex="docked"
     >
       {isDark ? <MoonIcon /> : <SunIcon />}
     </Button>

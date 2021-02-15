@@ -33,6 +33,9 @@ export default function Project({ project }) {
             isTruncated
           >
             {project.title}
+            <Badge ml="1" fontSize="0.8em" colorScheme="green">
+              New
+            </Badge>
           </Box>
           <Box d="flex" alignItems="baseline">
             {project.stack.categories.map((category) => (
@@ -41,7 +44,7 @@ export default function Project({ project }) {
                   <Badge
                     borderRadius="full"
                     px="2"
-                    colorScheme="teal"
+                    colorScheme="blue"
                     variant="subtle"
                     mr={1}
                   >
@@ -55,6 +58,8 @@ export default function Project({ project }) {
           <Box d="flex" mt="2" alignItems="center">
             <Box as="span" ml="2" color="gray.600" fontSize="sm">
               {project.description}
+              <br />
+              {project.publishedAt}
             </Box>
           </Box>
         </Box>
