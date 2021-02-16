@@ -8,6 +8,7 @@ import {
   Image,
   keyframes,
   usePrefersReducedMotion,
+  Tooltip,
 } from '@chakra-ui/react';
 import { ChevronUpIcon } from '@chakra-ui/icons';
 import { SiNextDotJs, SiGraphql, SiApollographql } from 'react-icons/si';
@@ -138,7 +139,6 @@ export default function Index({ projects }) {
 
         <Container
           id="about"
-          height="100vh"
           justifyContent="center"
           paddingTop={20}
           marginBottom="7rem"
@@ -206,7 +206,7 @@ export default function Index({ projects }) {
                   second phase of the project, I was invited by this bank to
                   join one of their internal areas as Systems analyst. I
                   initially developed in Java and I got a lot of experience
-                  along the way working on different tecnologies, projects and
+                  along the way working on different technologies, projects and
                   systems departments for 7 years.
                 </Text>
                 <Text fontWeight={600} fontSize="20px" marginTop="2rem">
@@ -216,7 +216,7 @@ export default function Index({ projects }) {
                   After 7 years at Itau, I decided that I wanted to experience a
                   life outside my country and I moved to Sydney - Australia,
                   where I met my wife and I had to make the big decision to live
-                  on this country permanently.
+                  in this country permanently.
                 </Text>
                 <Text marginY=".700rem">
                   My career in IT continued in Sydney. I started working in a
@@ -245,7 +245,7 @@ export default function Index({ projects }) {
                 </Text>
                 <Text marginY=".700rem">
                   At Canon, I don't work as much as I used to with development,
-                  however this is something that I am still passioned about and
+                  however this is something that I am still passionate about and
                   work on it as a daily basis, creating projects and
                   contributing to the open source community.
                 </Text>

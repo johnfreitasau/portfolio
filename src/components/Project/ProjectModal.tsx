@@ -7,25 +7,49 @@ import {
   ModalBody,
   ModalFooter,
   Button,
+  Text,
+  Link,
+  Image,
 } from '@chakra-ui/react';
 import { ImGithub } from 'react-icons/im';
 
 export default function ProjectModal({ isOpen, onClose, project }) {
+  console.log('PROJECT:', project);
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{project.title}</ModalHeader>
+        <ModalHeader>
+          {project.title}
+          <Link href={project.githubUrl} isExternal>
+            <ImGithub />
+          </Link>
+        </ModalHeader>
+
         <ModalCloseButton />
-        <ModalBody>{project.description}</ModalBody>
+        <ModalBody>
+          <Text marginBottom="1rem">{project.description}</Text>
+          <Text marginBottom="1rem">
+            <b>Language:</b> {project.stack.languages}
+          </Text>
+          <Text marginBottom="1rem">
+            <b>Libraries:</b> {project.stack.libraries}
+          </Text>
+          <Text marginBottom="1rem">
+            <b>Framework:</b> {project.stack.framework}
+          </Text>
+          <b>Preview:</b>
+          <Image
+            src={project.image?.imagePreviewUrl}
+            alt={project.image?.imageAlt}
+            width="19rem"
+          />
+        </ModalBody>
 
         <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
+          {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
             Close
-          </Button>
-          <Button variant="ghost">
-            <ImGithub />
-          </Button>
+          </Button> */}
         </ModalFooter>
       </ModalContent>
     </Modal>

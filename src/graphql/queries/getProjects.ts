@@ -7,17 +7,19 @@ const GET_PROJECTS_QUERY = gql`
   query projects {
     projects {
       id
-      image
       liveUrl
       publishedAt
-
       stage
       title
       githubUrl
       description
+      image
       stack {
         id
         framework
+        languages
+        libraries
+        database
         categories {
           id
           name

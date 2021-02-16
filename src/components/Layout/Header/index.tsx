@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Flex, Link } from '@chakra-ui/react';
+import { Box, Heading, Flex } from '@chakra-ui/react';
 import { HeaderNavigation } from './HeaderNavigation';
 import { DarkModeSwitch } from '../../DarkModeSwitch';
 export function Header() {

@@ -1,4 +1,11 @@
-import { Badge, Box, Wrap, WrapItem, useDisclosure } from '@chakra-ui/react';
+import {
+  Badge,
+  Box,
+  Wrap,
+  WrapItem,
+  useDisclosure,
+  Image,
+} from '@chakra-ui/react';
 
 import ProjectModal from './ProjectModal';
 
@@ -10,19 +17,25 @@ export default function Project({ project }) {
       <ProjectModal isOpen={isOpen} onClose={onClose} project={project} />
       <Box
         maxW="sm"
-        borderRadius="lg"
+        borderRadius="xl"
         overflow="hidden"
         boxShadow="2xl"
         rounded="md"
-        borderWidth="1px"
         borderColor="white"
         alignItems="flex-start"
-        _hover={{
-          boxShadow: 'none',
-        }}
         onClick={onOpen}
         cursor="pointer"
       >
+        <Image
+          src={project.image?.thumbnailUrl}
+          alt={project.image?.imageAlt}
+          opacity="0.5"
+          transition="0.5s"
+          // backgroundPosition="-100px -100px"
+          // width="500px"
+          // height="200px"
+          _hover={{ opacity: 1 }}
+        />
         <Box p="6">
           <Box
             mt="1"
@@ -59,7 +72,7 @@ export default function Project({ project }) {
             <Box as="span" ml="2" color="gray.600" fontSize="sm">
               {project.description}
               <br />
-              {project.publishedAt}
+              {/* {project.publishedAt} */}
             </Box>
           </Box>
         </Box>
