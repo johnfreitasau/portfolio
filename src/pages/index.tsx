@@ -8,7 +8,6 @@ import {
   Image,
   keyframes,
   usePrefersReducedMotion,
-  Tooltip,
 } from '@chakra-ui/react';
 import { ChevronUpIcon } from '@chakra-ui/icons';
 import { SiNextDotJs, SiGraphql, SiApollographql } from 'react-icons/si';

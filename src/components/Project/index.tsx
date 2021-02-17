@@ -1,3 +1,4 @@
+// import { useState } from 'react';
 import {
   Badge,
   Box,
@@ -11,17 +12,16 @@ import ProjectModal from './ProjectModal';
 
 export default function Project({ project }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  // const [isNew, setIsNew] = useState();
 
   return (
     <>
       <ProjectModal isOpen={isOpen} onClose={onClose} project={project} />
       <Box
         maxW="sm"
-        borderRadius="xl"
         overflow="hidden"
         boxShadow="2xl"
-        rounded="md"
-        borderColor="white"
+        rounded="xl"
         alignItems="flex-start"
         onClick={onOpen}
         cursor="pointer"
@@ -31,10 +31,9 @@ export default function Project({ project }) {
           alt={project.image?.imageAlt}
           opacity="0.5"
           transition="0.5s"
-          // backgroundPosition="-100px -100px"
-          // width="500px"
-          // height="200px"
           _hover={{ opacity: 1 }}
+          margin="auto"
+          display="block"
         />
         <Box p="6">
           <Box
@@ -46,6 +45,7 @@ export default function Project({ project }) {
             isTruncated
           >
             {project.title}
+
             <Badge ml="1" fontSize="0.8em" colorScheme="green">
               New
             </Badge>

@@ -5,7 +5,7 @@ import { Project } from '../schema';
 
 const GET_PROJECTS_QUERY = gql`
   query projects {
-    projects {
+    projects(orderBy: publishedDate_DESC) {
       id
       liveUrl
       publishedAt
@@ -14,6 +14,7 @@ const GET_PROJECTS_QUERY = gql`
       githubUrl
       description
       image
+      publishedDate
       stack {
         id
         framework
