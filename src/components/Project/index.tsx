@@ -7,12 +7,17 @@ import {
   useDisclosure,
   Image,
 } from '@chakra-ui/react';
+import { useMemo } from 'react';
+import { isThisYear } from 'date-fns';
 
 import ProjectModal from './ProjectModal';
 
 export default function Project({ project }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const [isNew, setIsNew] = useState();
+
+  const wasPublishedThisYear = useMemo(() => {
+    return isThisYear(new Date(project.publishedDate));
+  }, []);
 
   return (
     <>
@@ -45,10 +50,13 @@ export default function Project({ project }) {
             isTruncated
           >
             {project.title}
-
-            <Badge ml="1" fontSize="0.8em" colorScheme="green">
-              New
-            </Badge>
+            {wasPublishedThisYear && (
+              <>
+                <Badge ml="1" fontSize="0.8em" colorScheme="green">
+                  New
+                </Badge>
+              </>
+            )}
           </Box>
           <Box d="flex" alignItems="baseline">
             {project.stack.categories.map((category) => (
@@ -72,7 +80,6 @@ export default function Project({ project }) {
             <Box as="span" ml="2" color="gray.600" fontSize="sm">
               {project.description}
               <br />
-              {/* {project.publishedAt} */}
             </Box>
           </Box>
         </Box>
