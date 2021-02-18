@@ -102,18 +102,18 @@ export default function Index({ projects }) {
           <Heading
             bgGradient="linear(90deg, #007Cf0,#00DFD8)"
             bgClip="text"
-            fontSize="9vw"
+            fontSize={['23vw', '8rem', '10rem']}
             lineHeight="1"
             fontWeight="bold"
             letterSpacing="-.06em"
             animation={heading1Animation}
           >
-            Hi there.
+            Hello.
           </Heading>
           <Heading
             bgGradient="linear(90deg,#7928CA,#FF0080)"
             bgClip="text"
-            fontSize="9vw"
+            fontSize={['23vw', '8rem', '10rem']}
             lineHeight="1"
             fontWeight="bold"
             letterSpacing="-.06em"
@@ -124,7 +124,7 @@ export default function Index({ projects }) {
           <Heading
             bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
             bgClip="text"
-            fontSize="9vw"
+            fontSize={['23vw', '8rem', '10rem']}
             lineHeight="1"
             fontWeight="bold"
             letterSpacing="-.06em"
