@@ -45,11 +45,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
           />
         </ModalBody>
 
-        <ModalFooter>
-          {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button> */}
-        </ModalFooter>
+        <ModalFooter></ModalFooter>
       </ModalContent>
     </Modal>
   );

@@ -16,7 +16,7 @@ export function Header() {
       <Box borderBottomWidth={1} display="flex" width="full">
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" pl={3} letterSpacing={'-.2rem'}>
-            jf.
+            .jf
           </Heading>
         </Flex>
         <Box

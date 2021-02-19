@@ -30,13 +30,14 @@ export default function Project({ project }) {
         alignItems="flex-start"
         onClick={onOpen}
         cursor="pointer"
+        _hover={{ opacity: 1, transform: 'scale(1.02)' }}
+        transition="all 0.3s ease"
+        opacity="0.8"
       >
         <Image
           src={project.image?.thumbnailUrl}
           alt={project.image?.imageAlt}
-          opacity="0.5"
           transition="0.5s"
-          _hover={{ opacity: 1 }}
           margin="auto"
           display="block"
         />

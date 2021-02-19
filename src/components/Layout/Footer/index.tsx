@@ -37,7 +37,7 @@ export function Footer() {
               <Link
                 href="https://au.linkedin.com/in/john-freitas-368449191"
                 isExternal
-                _hover={{ color: '#fff', stroke: 'tomato' }}
+                _hover={{ opacity: '0.5', transition: 'all 0.6s ease' }}
               >
                 <AiFillLinkedin size="1.475rem" />
               </Link>
@@ -45,7 +45,7 @@ export function Footer() {
               <Link
                 href="https://github.com/johnfreitasau"
                 isExternal
-                _hover={{ color: '#fff', stroke: 'tomato' }}
+                _hover={{ opacity: '0.5', transition: 'all 0.6s ease' }}
               >
                 <AiOutlineGithub size="1.475rem" />
               </Link>
@@ -53,7 +53,7 @@ export function Footer() {
               <Link
                 href="https://twitter.com/jfcfreitas"
                 isExternal
-                _hover={{ color: '#fff', stroke: 'tomato' }}
+                _hover={{ opacity: '0.5', transition: 'all 0.6s ease' }}
               >
                 <AiOutlineTwitter size="1.475rem" />
               </Link>
