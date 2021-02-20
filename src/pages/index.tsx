@@ -44,7 +44,7 @@ import { ProjectsList } from '../components/ProjectsList';
 import { GetStaticProps } from 'next';
 import { getProjects } from '../graphql/queries/getProjects';
 import { Link } from '../components/Base/Link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -78,6 +78,7 @@ const animatedGradientTitle3 = keyframes`
 
 export default function Index({ projects }) {
   const [show, setShow] = useState(false);
+  const [isScrollTop, setIsScrollTop] = useState(false);
 
   function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -116,6 +117,8 @@ export default function Index({ projects }) {
         transition="all 0.3s ease"
         onClick={scrollTop}
         z-index={1}
+        // viewBox="0 0 100 100"
+
         // // bottom="0"
         // // width=100%;
         // height="auto"
@@ -159,12 +162,13 @@ export default function Index({ projects }) {
           <Heading
             bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
             bgClip="text"
-            fontSize={['23vw', '8rem', '10rem']}
+            fontSize={['19vw', '8rem', '10rem']}
             lineHeight="1"
             fontWeight="bold"
             letterSpacing="-.06em"
             animation={heading3Animation}
             textAlign="right"
+            isTruncated
           >
             I'm John.
           </Heading>
@@ -335,7 +339,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -365,8 +369,11 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
-                _hover={{ opacity: 1, transform: 'scale(1.02)' }}
+                // cursor="pointer"
+                _hover={{
+                  opacity: 1,
+                  transform: 'scale(1.02)',
+                }}
                 transition="all 0.3s ease"
                 opacity="0.8"
                 w="150px"
@@ -426,7 +433,6 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -575,7 +581,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -604,7 +610,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -636,7 +642,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -665,7 +671,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -695,7 +701,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -724,7 +730,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -753,7 +759,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"
@@ -782,7 +788,7 @@ export default function Index({ projects }) {
                 rounded="xl"
                 // alignItems="flex-start"
                 // onClick={onOpen}
-                cursor="pointer"
+                // cursor="pointer"
                 _hover={{ opacity: 1, transform: 'scale(1.02)' }}
                 transition="all 0.3s ease"
                 opacity="0.8"

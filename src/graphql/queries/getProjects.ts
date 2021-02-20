@@ -15,16 +15,13 @@ const GET_PROJECTS_QUERY = gql`
       description
       image
       publishedDate
-      stack {
+      language
+      frontendStackDetails
+      backendStackDetails
+      mobileStackDetails
+      stacks {
         id
-        framework
-        languages
-        libraries
-        database
-        categories {
-          id
-          name
-        }
+        name
       }
     }
   }

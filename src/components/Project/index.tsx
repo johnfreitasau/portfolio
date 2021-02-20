@@ -60,9 +60,9 @@ export default function Project({ project }) {
             )}
           </Box>
           <Box d="flex" alignItems="baseline">
-            {project.stack.categories.map((category) => (
+            {project.stacks.map((stack) => (
               <Wrap spacing={1} marginBottom="auto">
-                <WrapItem key={category.id}>
+                <WrapItem key={stack.id}>
                   <Badge
                     borderRadius="full"
                     px="2"
@@ -70,7 +70,7 @@ export default function Project({ project }) {
                     variant="subtle"
                     mr={1}
                   >
-                    {category.name}
+                    {stack.name}
                   </Badge>
                 </WrapItem>
               </Wrap>
