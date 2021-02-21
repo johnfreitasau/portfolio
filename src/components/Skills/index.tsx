@@ -1,6 +1,15 @@
-import { Box, Heading, Text, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Link,
+  Text,
+  VStack,
+  Wrap,
+  WrapItem,
+} from '@chakra-ui/react';
 import { Express } from '@styled-icons/simple-icons/Express';
 import React from 'react';
+import { externalLinks } from '../../constants/externalLinks';
 import { CustomBox } from './CustomBox';
 import { SkillsProps } from './types';
 
@@ -17,8 +26,47 @@ export function Skills({ skills }: Array<SkillsProps>) {
         Skills
       </Heading>
       <Text lineHeigh="1.6" letterSpacing="-.02em" fontWeight="300">
-        The stack I'm currently focused on is React (in love with Next.js),
-        Node.js and React Native. See more details below.
+        The stack I'm currently focused on is{' '}
+        <Link
+          color="black.600"
+          fontWeight="700"
+          href={externalLinks.nextjs}
+          isExternal
+          _hover={{ opacity: 0.5 }}
+        >
+          React
+        </Link>{' '}
+        (in love with{' '}
+        <Link
+          color="black.600"
+          fontWeight="700"
+          href={externalLinks.nextjs}
+          isExternal
+          _hover={{ opacity: 0.5 }}
+        >
+          Next.js
+        </Link>
+        ),{' '}
+        <Link
+          color="black.600"
+          fontWeight="700"
+          href={externalLinks.nextjs}
+          isExternal
+          _hover={{ opacity: 0.5 }}
+        >
+          Node.js
+        </Link>{' '}
+        and{' '}
+        <Link
+          color="black.600"
+          fontWeight="700"
+          href={externalLinks.nextjs}
+          isExternal
+          _hover={{ opacity: 0.5 }}
+        >
+          React Native
+        </Link>
+        . See more details below.
       </Text>
 
       <Text

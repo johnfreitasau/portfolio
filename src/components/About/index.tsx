@@ -62,6 +62,7 @@ export function About() {
               color="cyan.600"
               fontWeight="700"
               href={externalLinks.bsi}
+              _hover={{ opacity: 0.5 }}
               isExternal
             >
               BSI
@@ -72,6 +73,7 @@ export function About() {
               color="cyan.600"
               fontWeight="700"
               href={externalLinks.itau}
+              _hover={{ opacity: 0.5 }}
               isExternal
             >
               {' '}
@@ -105,6 +107,7 @@ export function About() {
                 color="cyan.600"
                 fontWeight="700"
                 href={externalLinks.harbourit}
+                _hover={{ opacity: 0.5 }}
                 isExternal
               >
                 Harbour IT
@@ -114,6 +117,7 @@ export function About() {
                 color="cyan.600"
                 fontWeight="700"
                 href={externalLinks.canon}
+                _hover={{ opacity: 0.5 }}
                 isExternal
               >
                 Canon Group

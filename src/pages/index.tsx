@@ -60,8 +60,6 @@ export default function Index({ projects, skills }) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  console.log('SKILLS:', skills);
-
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const heading1Animation = prefersReducedMotion
