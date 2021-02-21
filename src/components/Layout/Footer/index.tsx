@@ -59,7 +59,7 @@ export function Footer() {
               </Link>
             </HStack>
           </Box>
-          <Text fontWeight={200} marginTop="0.876rem">
+          <Text fontWeight="light" fontSize=".85rem" marginTop="0.876rem">
             © 2021 John Freitas
           </Text>
         </Heading>

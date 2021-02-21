@@ -1,5 +1,3 @@
-import { StackDirection } from '@chakra-ui/react';
-
 export type Asset = {
   id: string;
   url: string;

@@ -1,16 +1,13 @@
-// import { useState } from 'react';
 import {
   Badge,
   Box,
+  Image,
+  useDisclosure,
   Wrap,
   WrapItem,
-  useDisclosure,
-  Image,
 } from '@chakra-ui/react';
-import { useMemo } from 'react';
 import { isThisYear } from 'date-fns';
-import { Project as ProjectProps } from '../../graphql/schema';
-
+import { useMemo } from 'react';
 import { ProjectModal } from './ProjectModal';
 
 export function Project({ project }) {

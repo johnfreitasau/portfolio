@@ -53,9 +53,7 @@ interface PortfolioProps {
   skills: Skill;
 }
 
-export default function Index({ projects, skills }) {
-  console.log('SKILLS 1:', skills);
-
+export default function Index({ projects, skills }: PortfolioProps) {
   function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

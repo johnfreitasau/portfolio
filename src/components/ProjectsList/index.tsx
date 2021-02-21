@@ -1,7 +1,6 @@
 import React from 'react';
 import { Heading, SimpleGrid, VStack, Text } from '@chakra-ui/react';
 import { Project } from '../Project';
-// import { ProjectsListProps } from './types';
 
 export function ProjectsList({ projects }) {
   return (
