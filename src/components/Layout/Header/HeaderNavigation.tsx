@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/icons';
 
 import { navigationItems } from '../../../constants/navigation';
-import { Link } from '../../Base/Link';
+import { Link } from '@chakra-ui/react';
 
 export function HeaderNavigation() {
   return (
@@ -29,7 +29,9 @@ export function HeaderNavigation() {
       >
         {navigationItems.map(({ name, href }) => (
           <li key={name}>
-            <Link href={href}>{name}</Link>
+            <Link href={href} _hover={{ color: '#666' }}>
+              {name}
+            </Link>
           </li>
         ))}
       </HStack>

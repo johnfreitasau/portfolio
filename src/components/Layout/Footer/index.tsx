@@ -39,7 +39,7 @@ export function Footer() {
                 isExternal
                 _hover={{ opacity: '0.5', transition: 'all 0.6s ease' }}
               >
-                <AiFillLinkedin size="1.475rem" />
+                <AiFillLinkedin size="2rem" />
               </Link>
 
               <Link
@@ -47,7 +47,7 @@ export function Footer() {
                 isExternal
                 _hover={{ opacity: '0.5', transition: 'all 0.6s ease' }}
               >
-                <AiOutlineGithub size="1.475rem" />
+                <AiOutlineGithub size="2rem" />
               </Link>
 
               <Link
@@ -55,7 +55,7 @@ export function Footer() {
                 isExternal
                 _hover={{ opacity: '0.5', transition: 'all 0.6s ease' }}
               >
-                <AiOutlineTwitter size="1.475rem" />
+                <AiOutlineTwitter size="2rem" />
               </Link>
             </HStack>
           </Box>

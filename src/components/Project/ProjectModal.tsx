@@ -5,12 +5,10 @@ import {
   ModalContent,
   ModalCloseButton,
   ModalBody,
-  ModalFooter,
   Text,
   Link,
   Image,
   Box,
-  Stack,
   VStack,
   Badge,
 } from '@chakra-ui/react';
@@ -18,9 +16,7 @@ import { useMemo } from 'react';
 import { ImGithub } from 'react-icons/im';
 import { SiTypescript, SiJavascript } from 'react-icons/si';
 
-export default function ProjectModal({ isOpen, onClose, project }) {
-  console.log('PROJECT:', project);
-
+export function ProjectModal({ isOpen, onClose, project }) {
   const frontendStackDetails = useMemo(() => {
     if (project.frontendStackDetails) {
       return project.frontendStackDetails?.split(',');
@@ -47,8 +43,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
 
         <ModalCloseButton />
         <ModalBody>
-          {/* <Stack direction={['column', 'row']} spacing="24px"> */}
-          <VStack>
+          <VStack mb="1rem">
             <Text marginBottom="1rem">{project.description}</Text>
 
             <Image
@@ -120,8 +115,6 @@ export default function ProjectModal({ isOpen, onClose, project }) {
             </Link>
           </VStack>
         </ModalBody>
-
-        <ModalFooter></ModalFooter>
       </ModalContent>
     </Modal>
   );

@@ -9,10 +9,11 @@ import {
 } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { isThisYear } from 'date-fns';
+import { Project as ProjectProps } from '../../graphql/schema';
 
-import ProjectModal from './ProjectModal';
+import { ProjectModal } from './ProjectModal';
 
-export default function Project({ project }) {
+export function Project({ project }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const wasPublishedThisYear = useMemo(() => {
