@@ -3,7 +3,7 @@ import { Express } from '@styled-icons/simple-icons/Express';
 import React from 'react';
 import { externalLinks } from '../../constants/externalLinks';
 import { CustomBox } from './CustomBox';
-import { SkillsProps } from './types';
+// import { SkillsProps } from './types';
 
 export function Skills({ skills }: any) {
   // export function Skills({ skills }: Array<SkillsProps>) {
