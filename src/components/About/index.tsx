@@ -133,9 +133,11 @@ export function About() {
               the open source community.
             </Text>
           </Collapse>
-          <Button size="sm" onClick={handleToggle} mt="1rem">
-            Show {show ? 'Less' : 'More'}
-          </Button>
+          <VStack>
+            <Button size="sm" onClick={handleToggle} mt="1rem">
+              Show {show ? 'Less' : 'More'}
+            </Button>
+          </VStack>
         </Box>
       </Box>
     </VStack>
