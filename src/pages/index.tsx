@@ -78,15 +78,12 @@ export default function Index({ projects, skills }: PortfolioProps) {
         position="fixed"
         h="45px"
         w="45px"
-        backgroundColor="brimson"
         right="50px"
         bottom="50px"
-        ta="center"
-        lh="45px"
         borderRadius="6px"
         cursor="pointer"
-        pointer-event="none"
         transition="all 0.3s ease"
+        opacity=".7"
         onClick={scrollTop}
         z-index={1}
       >

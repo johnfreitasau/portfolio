@@ -80,7 +80,8 @@ export function Skills({ skills }: any) {
         direction="column"
         alignItems="start"
       > */}
-      <HStack display="flex" flexDirection="row" flexWrap="wrap">
+
+      <HStack display="flex" flexWrap="wrap" justifyContent="center">
         {skills[0]?.detailedSkills?.map((skill) => (
           // <WrapItem>
           <CustomBox
@@ -128,7 +129,7 @@ export function Skills({ skills }: any) {
 
       {/* <Wrap justify="center"> */}
       {/* <WrapItem> */}
-      <HStack display="flex" flexDirection="row" flexWrap="wrap">
+      <HStack display="flex" flexWrap="wrap" justifyContent="center">
         {skills[0]?.languageSkills?.map((language) => (
           <CustomBox
             stackName={language.name}
@@ -153,7 +154,7 @@ export function Skills({ skills }: any) {
         OTHERS
       </Text>
 
-      <HStack display="flex" flexDirection="row" flexWrap="wrap">
+      <HStack display="flex" flexWrap="wrap" justifyContent="center">
         {/* <Wrap justify="center"> */}
         {/* <WrapItem> */}
         {skills[0]?.otherSkills?.map((other) => (

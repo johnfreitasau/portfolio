@@ -50,11 +50,11 @@ export function HeaderNavigation() {
               <MenuOptionGroup defaultValue="asc" title="Menu">
                 <MenuDivider />
                 {navigationItems.map(({ name, href }) => (
-                  <MenuItem value={name}>
-                    <Link href={href}>
+                  <Link href={href} _hover={{ textDecoration: 'none' }}>
+                    <MenuItem value={name}>
                       <ChevronRightIcon /> {name}
-                    </Link>
-                  </MenuItem>
+                    </MenuItem>
+                  </Link>
                 ))}
               </MenuOptionGroup>
             </MenuList>
