@@ -40,21 +40,15 @@ Chakra UI | GraphQL CMS</h4>
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [NextJS](https://nextjs.org/)
-- [Next-Apollo](https://github.com/adamsoffer/next-apollo)
-- [Next Images](https://vercel.com/docs/next.js/image-optimization)
+- [NextJS](https://nextjs.org/) ❤️
+- [Chakra UI](https://chakra-ui.com/) 
 - [GraphQL](https://graphql.org/)
-- [GraphQL CodeGen](https://graphql-code-generator.com/)
-- [Apollo Client](https://www.apollographql.com/docs/react/)
-- [Formik](https://formik.org/)
-- [Leaflet](https://leafletjs.com/)
-- [Mapbox API](https://www.mapbox.com/)
-- [React Icons](https://react-icons.netlify.com/#/)
-- [Styled Components](https://styled-components.com/)
-- [Yup](https://github.com/jquense/yup)
+- [GraphQL Request](https://www.npmjs.com/package/graphql-request)
+- [GraphCMS](https://graphcms.com/)
+- [Date-fns](https://date-fns.org/)
+- [React Icons](https://react-icons.github.io/react-icons/#/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-
 
 # :rocket: Features
 
