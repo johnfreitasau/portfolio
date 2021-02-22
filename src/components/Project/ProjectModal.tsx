@@ -36,7 +36,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
   }, []);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} isCentered>
+    <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>{project.title}</ModalHeader>
@@ -60,6 +60,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
                   colorScheme="blue"
                   variant="subtle"
                   mr={1}
+                  key={frontendStackDetail}
                 >
                   {frontendStackDetail}
                 </Badge>
@@ -75,6 +76,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
                   colorScheme="cyan"
                   variant="subtle"
                   mr={1}
+                  key={backendStackDetail}
                 >
                   {backendStackDetail}
                 </Badge>
@@ -90,6 +92,7 @@ export function ProjectModal({ isOpen, onClose, project }) {
                   colorScheme="purple"
                   variant="subtle"
                   mr={1}
+                  key={mobileStackDetail}
                 >
                   {mobileStackDetail}
                 </Badge>

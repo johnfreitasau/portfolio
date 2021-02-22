@@ -19,7 +19,7 @@ export function About() {
   return (
     <VStack paddingTop={20} id="about">
       <Heading
-        font-weight="700"
+        fontWeight="bold"
         fontSize={['1.5rem', '3.75rem']}
         letterSpacing="-.06em"
         as="h4"

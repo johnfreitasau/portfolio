@@ -5,12 +5,18 @@ import { externalLinks } from '../../constants/externalLinks';
 import { CustomBox } from './CustomBox';
 // import { SkillsProps } from './types';
 
-export function Skills({ skills }: any) {
-  // export function Skills({ skills }: Array<SkillsProps>) {
+type SkillsProps = {
+  detailedSkills?: Array<any>;
+  languageSkills?: Array<any>;
+  otherSkills?: Array<any>;
+};
+
+// export function Skills({ skills }: any) {
+export function Skills({ skills }) {
   return (
     <VStack id="skills" paddingTop={20} alignItems="left">
       <Heading
-        font-weight="700"
+        fontWeight="bold"
         fontSize={['1.5rem', '3.75rem']}
         letterSpacing="-.06em"
         as="h4"
@@ -18,7 +24,7 @@ export function Skills({ skills }: any) {
       >
         Skills
       </Heading>
-      <Text lineHeigh="1.6" letterSpacing="-.02em" fontWeight="300">
+      <Text lineHeight="1.6" letterSpacing="-.02em" fontWeight="300">
         The stack I'm currently focused on is{' '}
         <Link
           color="black.600"
@@ -67,7 +73,7 @@ export function Skills({ skills }: any) {
         as="h3"
         fontSize="0.75rem"
         fontWeight="bold"
-        letter-spacing="0.2rem"
+        letterSpacing="0.2rem"
         textAlign="center"
         paddingTop="3rem"
       >
@@ -88,6 +94,7 @@ export function Skills({ skills }: any) {
             stackName={skill.name}
             iconName={skill.icon}
             color={skill.color}
+            key={skill.id}
             size={50}
           />
           // </WrapItem>
@@ -120,7 +127,7 @@ export function Skills({ skills }: any) {
         as="h3"
         fontSize="0.75rem"
         fontWeight="bold"
-        letter-spacing="0.2rem"
+        letterSpacing="0.2rem"
         textAlign="center"
         paddingTop="3rem"
       >
@@ -135,6 +142,7 @@ export function Skills({ skills }: any) {
             stackName={language.name}
             iconName={language.icon}
             color={language.color}
+            key={language.id}
             size={50}
           />
         ))}
@@ -147,7 +155,7 @@ export function Skills({ skills }: any) {
         as="h3"
         fontSize="0.75rem"
         fontWeight="bold"
-        letter-spacing="0.2rem"
+        letterSpacing="0.2rem"
         textAlign="center"
         paddingTop="3rem"
       >
@@ -162,6 +170,7 @@ export function Skills({ skills }: any) {
             stackName={other.name}
             iconName={other.icon}
             color={other.color}
+            key={other.id}
             size={50}
           />
         ))}

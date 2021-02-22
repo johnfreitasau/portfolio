@@ -3,7 +3,19 @@ import { Box } from '@chakra-ui/react';
 
 import * as SimpleIcons from 'react-icons/si';
 
-export function CustomBox({ iconName, stackName, size, color }) {
+interface CustomBoxProps {
+  iconName: number;
+  stackName: String;
+  size: number;
+  color: string;
+}
+
+export function CustomBox({
+  iconName,
+  stackName,
+  size,
+  color,
+}: CustomBoxProps) {
   const icon = React.createElement(SimpleIcons[iconName]);
 
   return (

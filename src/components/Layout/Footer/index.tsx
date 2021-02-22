@@ -28,7 +28,7 @@ export function Footer() {
         <Heading
           size=".875rem"
           width="100%"
-          fontWeight={400}
+          fontWeight="normal"
           textAlign="center"
         >
           Connect with me on
