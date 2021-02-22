@@ -94,13 +94,7 @@ export default function Index({ projects, skills }: PortfolioProps) {
       </Button>
 
       <Flex direction="column">
-        <Stack
-          spacing={6}
-          alignItems="center"
-          height="100vh"
-          justifyContent="center"
-          marginTop="-3rem"
-        >
+        <Stack alignItems="center" marginTop=".10rem">
           <Heading
             bgGradient="linear(90deg, #007Cf0,#00DFD8)"
             bgClip="text"
@@ -131,7 +125,7 @@ export default function Index({ projects, skills }: PortfolioProps) {
             fontWeight="bold"
             letterSpacing="-.06em"
             animation={heading3Animation}
-            textAlign="right"
+            // textAlign="right"
             isTruncated
           >
             I'm John.
