@@ -9,12 +9,12 @@
 Chakra UI | GraphQL CMS</h4>
 <!-- E02041 -->
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/johnfreitasau/portfio?color=%2329B6D1">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/johnfreitasau/portfolio?color=%2329B6D1">
   <a href="https://www.linkedin.com/in/johnfreitasau/"><img alt="Made by" src="https://img.shields.io/badge/made%20by-John%20Freitas-%2329B6D1"></a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/johnfreitasau/portfio?color=%2329B6D1">
-  <a href="https://github.com/johnfreitasau/portfio/commits/main"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/johnfreitasau/portfio?color=%2329B6D1"></a>
-  <a href="https://github.com/johnfreitasau/portfio/issues"><img alt="Repository issues" src="https://img.shields.io/github/issues/johnfreitasau/portfio?color=%2329B6D1"></a>
-  <img alt="GitHub" src="https://img.shields.io/github/license/johnfreitasau/portfio?color=%2329B6D2">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/johnfreitasau/portfolio?color=%2329B6D1">
+  <a href="https://github.com/johnfreitasau/portfolio/commits/main"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/johnfreitasau/portfolio?color=%2329B6D1"></a>
+  <a href="https://github.com/johnfreitasau/portfolio/issues"><img alt="Repository issues" src="https://img.shields.io/github/issues/johnfreitasau/portfolio?color=%2329B6D1"></a>
+  <img alt="GitHub" src="https://img.shields.io/github/license/johnfreitasau/portfolio?color=%2329B6D2">
 </p>
 
 <p align="center">
@@ -31,6 +31,9 @@ Chakra UI | GraphQL CMS</h4>
 <p align="center">
    <img src="./.github/images/portfolio_demo1.gif" width="500"/>
 </p>
+
+### :rocket: My Portfolio is now live at: [Portfolio](https://portfolio-johnfreitasau.vercel.app/)
+
 
 
 # :rocket: Technologies
@@ -55,24 +58,10 @@ Chakra UI | GraphQL CMS</h4>
 
 # :rocket: Features
 
-* List Orphanages on the Map
-* Register a new Orphanage
-* See Orphanage Details
-
-
-# :construction_worker: Installation
-
-**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then in order to clone the project via HTTPS, run this command:**
-
-```git clone https://github.com/johnfreitasau/portfio.git```
-
-SSH URLs provide access to a Git repository via SSH, a secure protocol. If you have a SSH key registered in your Github account, clone the project using this command:
-
-```git clone git@github.com:johnfreitasau/portfio.git```
-
-**Mapbox API**
-
-To be able to access the Mapbox API, you'll need to register on their website (https://account.mapbox.com/) and get a Mapbox access token. Mapbox uses access tokens to associate API requests with your account. You can find your access tokens on your Access Tokens page (https://account.mapbox.com/).
+* About section
+* Skills section
+* Projects section
+* Project details Modals
 
 
 **Install dependencies**
@@ -86,13 +75,19 @@ Create your enviroment variables based on the examples of ```.env.example```
 After copying the examples, make sure to fill the variables with new values.
 
 
-**Setup the API**
+**The API**
 
 This project uses [GraphCMS](https://graphcms.com/) as a Headless CMS, which is a content management system that delivers content as data to any platform or device via API.
 
-The frontend interacts with api api to receive and register data during the build, the data is provided to the end user is static using NextJS.
+The frontend interacts with the API to receive the Porfolio data and create the static pages using NextJS.
 
-Make sure to create an account in GraphCMS and create the same schema structure of "graphql/schema.ts", so you will be able to populate the data via CMS as you wish.
+
+**Acessing the GraphCMS API**
+
+Make sure to create an account in GraphCMS and create the model structure to fit the schema "graphql/schema.ts", so you will be able to populate the data on the CMS as you wish and receive the data successfully in GraphQL.
+
+To be able to access the GraphCMS API, you will need to get the API access URL under the Settings menu and populate it on your your .env.local. I have created a .env.local.example file as example.
+
 
 # :runner: Getting Started
 
@@ -105,16 +100,16 @@ Run the following command in order to start the application in a development env
 
 **Question:** What are the tecnologies used in this project?
 
-**Answer:** The tecnologies used in this project are Next.js + Graphql + Apollo Client + TypeScript + Styled Components.
+**Answer:** The tecnologies used in this project are Next.js + Graphql + GraphQLCMS + TypeScript + Chakra UI.
 
 
 # :bug: Issues
 
-Feel free to **file a new issue** with a respective title and description on the the [Porfolio](https://github.com/johnfreitasau/portfio/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/johnfreitasau/portfio/blob/main/CONTRIBUTING.md) to find out about the coding standards.
+Feel free to **file a new issue** with a respective title and description on the the [Porfolio](https://github.com/johnfreitasau/portfolio/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/johnfreitasau/portfolio/blob/main/CONTRIBUTING.md) to find out about the coding standards.
 
 # :tada: Contributing
 
-Check out the [contributing](https://github.com/johnfreitasau/portfio/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
+Check out the [contributing](https://github.com/johnfreitasau/portfolio/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
 
 
 # :closed_book: License
