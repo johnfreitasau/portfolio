@@ -1,5 +1,5 @@
 <h1 align="center">
-  "<img src=".github/images/logo.png" alt="My Portfolio">"
+  <img src=".github/images/porfolio-thumbnail.PNG" alt="My Portfolio">
 </h1>
 
 <h3 align="center">
