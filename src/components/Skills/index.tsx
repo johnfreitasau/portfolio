@@ -1,18 +1,20 @@
-import { Box, Heading, Link, Text, VStack, HStack } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Link,
+  Text,
+  VStack,
+  Wrap,
+  WrapItem,
+  Center,
+} from '@chakra-ui/react';
 import { Express } from '@styled-icons/simple-icons/Express';
 import React from 'react';
 import { externalLinks } from '../../constants/externalLinks';
 import { CustomBox } from './CustomBox';
-// import { SkillsProps } from './types';
+import { SkillsProps } from './types';
 
-type SkillsProps = {
-  detailedSkills?: Array<any>;
-  languageSkills?: Array<any>;
-  otherSkills?: Array<any>;
-};
-
-// export function Skills({ skills }: any) {
-export function Skills({ skills }) {
+export function Skills({ skills }: SkillsProps) {
   return (
     <VStack id="skills" paddingTop={20} alignItems="left">
       <Heading
@@ -79,25 +81,20 @@ export function Skills({ skills }) {
       >
         MOST USED STACKS
       </Text>
-      {/* <Wrap
-        justify="center"
-        width="full"
-        spacing={1}
-        direction="column"
-        alignItems="start"
-      > */}
 
-      <HStack display="flex" flexWrap="wrap" justifyContent="center">
+      <Wrap justify="center">
         {skills[0]?.detailedSkills?.map((skill) => (
-          // <WrapItem>
-          <CustomBox
-            stackName={skill.name}
-            iconName={skill.icon}
-            color={skill.color}
-            key={skill.id}
-            size={50}
-          />
-          // </WrapItem>
+          <WrapItem key={skill.id}>
+            <Center>
+              <CustomBox
+                stackName={skill.name}
+                iconName={skill.icon}
+                color={skill.color}
+                key={skill.id}
+                size={50}
+              />
+            </Center>
+          </WrapItem>
         ))}
         {/* Requested to add a new icon for Express #417 opened
           https://github.com/react-icons/react-icons/issues/417
@@ -119,8 +116,7 @@ export function Skills({ skills }) {
           <Express size={50} />
           <Text>Express</Text>
         </Box>
-      </HStack>
-      {/* </Wrap> */}
+      </Wrap>
 
       <Text
         mt="3rem"
@@ -134,21 +130,21 @@ export function Skills({ skills }) {
         FAVORITE LANGUAGES
       </Text>
 
-      {/* <Wrap justify="center"> */}
-      {/* <WrapItem> */}
-      <HStack display="flex" flexWrap="wrap" justifyContent="center">
+      <Wrap justify="center">
         {skills[0]?.languageSkills?.map((language) => (
-          <CustomBox
-            stackName={language.name}
-            iconName={language.icon}
-            color={language.color}
-            key={language.id}
-            size={50}
-          />
+          <WrapItem key={language.id}>
+            <Center>
+              <CustomBox
+                stackName={language.name}
+                iconName={language.icon}
+                color={language.color}
+                key={language.id}
+                size={50}
+              />
+            </Center>
+          </WrapItem>
         ))}
-      </HStack>
-      {/* </WrapItem> */}
-      {/* </Wrap> */}
+      </Wrap>
 
       <Text
         mt="3rem"
@@ -162,21 +158,21 @@ export function Skills({ skills }) {
         OTHERS
       </Text>
 
-      <HStack display="flex" flexWrap="wrap" justifyContent="center">
-        {/* <Wrap justify="center"> */}
-        {/* <WrapItem> */}
+      <Wrap justify="center">
         {skills[0]?.otherSkills?.map((other) => (
-          <CustomBox
-            stackName={other.name}
-            iconName={other.icon}
-            color={other.color}
-            key={other.id}
-            size={50}
-          />
+          <WrapItem key={other.id}>
+            <Center>
+              <CustomBox
+                stackName={other.name}
+                iconName={other.icon}
+                color={other.color}
+                key={other.id}
+                size={50}
+              />
+            </Center>
+          </WrapItem>
         ))}
-        {/* </WrapItem> */}
-        {/* </Wrap> */}
-      </HStack>
+      </Wrap>
     </VStack>
   );
 }

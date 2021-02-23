@@ -16,7 +16,37 @@ import { useMemo } from 'react';
 import { ImGithub } from 'react-icons/im';
 import { SiTypescript, SiJavascript } from 'react-icons/si';
 
-export function ProjectModal({ isOpen, onClose, project }) {
+type ProjectModalProps = {
+  isOpen?: boolean;
+  defaultIsOpen?: boolean;
+  onClose?(): void;
+  project: ProjectProps;
+};
+
+type ProjectProps = {
+  id: String;
+  title: String;
+  githubUrl?: any;
+  liveUrl?: String;
+  image?: {
+    id: any;
+    imageAlt: any;
+    thumbnailUrl?: any;
+    imagePreviewUrl?: any;
+  };
+  description?: String;
+  language: String;
+  frontendStackDetails?: String;
+  backendStackDetails?: String;
+  mobileStackDetails?: String;
+  publishedDate: Date;
+  stacks?: {
+    id: String;
+    name: String;
+  }[];
+};
+
+export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
   const frontendStackDetails = useMemo(() => {
     if (project.frontendStackDetails) {
       return project.frontendStackDetails?.split(',');
@@ -98,18 +128,14 @@ export function ProjectModal({ isOpen, onClose, project }) {
                 </Badge>
               ))}
             </Box>
-
-            <Text marginBottom="1rem">
-              <VStack>
+            <VStack display="flex" direction="row" marginBottom="1rem">
+              <Text>
                 <b>Developed in</b>
-                {project.language === 'TypeScript' && (
-                  <SiTypescript size={35} />
-                )}
-                {project.language === 'JavaScript' && (
-                  <SiJavascript size={35} />
-                )}
-              </VStack>
-            </Text>
+              </Text>
+              {project.language === 'TypeScript' && <SiTypescript size={35} />}
+              {project.language === 'JavaScript' && <SiJavascript size={35} />}
+            </VStack>
+
             <Text>
               <b>Find out more about this project at</b>
             </Text>

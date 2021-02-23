@@ -1,17 +1,24 @@
 export type ProjectProps = {
-  id: string;
-  title?: string;
-  githubUrl?: string;
-  liveUrl?: string;
-  image?: Object;
-  description?: string;
-  language?: string;
-  frontendStackDetails?: string;
-  backendStackDetails?: string;
-  mobileStackDetails?: string;
-  publishedDate?: string;
-  stacks?: {
+  project: {
     id: String;
-    name: String;
+    title: String;
+    githubUrl: String;
+    liveUrl?: String;
+    image?: {
+      id: any;
+      imageAlt: any;
+      thumbnailUrl?: any;
+      imagePreviewUrl?: any;
+    };
+    description?: String;
+    language: String;
+    frontendStackDetails: String;
+    backendStackDetails: String;
+    mobileStackDetails: String;
+    publishedDate: Date;
+    stacks?: {
+      id: string;
+      name: String;
+    }[];
   };
 };

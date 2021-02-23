@@ -10,8 +10,9 @@ import {
 import { isThisYear } from 'date-fns';
 import { useMemo } from 'react';
 import { ProjectModal } from './ProjectModal';
+import { ProjectProps } from './types';
 
-export function Project({ project }) {
+export function Project({ project }: ProjectProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const wasPublishedThisYear = useMemo(() => {
@@ -61,8 +62,8 @@ export function Project({ project }) {
             </Box>
             <Box d="flex" alignItems="baseline">
               {project.stacks.map((stack) => (
-                <Wrap spacing={1} marginBottom="auto">
-                  <WrapItem key={stack.id}>
+                <Wrap spacing={1} marginBottom="auto" key={stack.id}>
+                  <WrapItem>
                     <Badge
                       borderRadius="full"
                       px="2"

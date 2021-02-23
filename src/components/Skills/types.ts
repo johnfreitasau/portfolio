@@ -1,8 +1,10 @@
 export type SkillsProps = {
-  detailedSkills: Array<DetailedSkill>;
-  languageSkills: Array<LanguageSkill>;
-  otherSkills: Array<OtherSkill>;
-}[];
+  skills: {
+    detailedSkills?: Array<DetailedSkill>;
+    languageSkills?: Array<LanguageSkill>;
+    otherSkills?: Array<OtherSkill>;
+  };
+};
 
 export type DetailedSkill = {
   id: string;

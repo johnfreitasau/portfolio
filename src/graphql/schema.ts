@@ -10,16 +10,25 @@ export type Stack = {
 
 export type Project = {
   id: string;
-  title: string;
-  githubUrl: string;
-  liveUrl?: string;
-  image: Asset;
-  description: string;
-  language: string;
-  stack: Stack;
-  frontendStackDetails: string;
-  backendStackDetails: string;
-  mobileStackDetails: string;
+  title: String;
+  githubUrl: String;
+  liveUrl?: String;
+  image?: {
+    id: string;
+    imageAlt: String;
+    thumbnailUrl?: String;
+    imagePreviewUrl?: String;
+  };
+  description?: String;
+  language: String;
+  frontendStackDetails: String;
+  backendStackDetails: String;
+  mobileStackDetails: String;
+  publishedDate: Date;
+  stacks?: {
+    id: string;
+    name: String;
+  }[];
 };
 
 export type Skill = {

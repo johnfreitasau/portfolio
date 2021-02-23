@@ -15,43 +15,107 @@ import { About } from '../components/About';
 import { Skills } from '../components/Skills';
 import { getProjects } from '../graphql/queries/getProjects';
 import { getSkills } from '../graphql/queries/getSkills';
-import { ProjectsListProps } from '../components/ProjectsList/types';
-import { Skill } from '../graphql/schema';
+// import { ProjectsListProps } from '../components/ProjectsList/types';
+// import { SkillsProps } from '../components/skills/types';
+
+// import { Skill } from '../graphql/schema';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
-    opacity: 1;
+    filter: brightness(1);
+    /* opacity: 1; */
   }
 
   33.333%, 83.333% {
-    opacity: 0;
+    /* opacity: 0; */
+    filter: brightness(0);
   }
 `;
 
 const animatedGradientTitle2 = keyframes`
 	0%, 16.667%, 66.667%, 100% {
-    opacity:0
+    /* opacity:0; */
+    filter: brightness(0);
   }
 
 	33.333%, 50% {
-		opacity: 1;
+    /* opacity:1; */
+    filter: brightness(1);
 	}
 `;
 
 const animatedGradientTitle3 = keyframes`
 	0%, 50%, 100% {
-		opacity: 0;
+		filter: brightness(0);
+    /* opacity: 0; */
 	}
 
 	66.667%, 83.333% {
-		opacity: 1;
+		filter: brightness(1);
+    /* opacity: 1; */
 	}
 `;
 
 interface PortfolioProps {
-  projects: ProjectsListProps;
-  skills: Skill;
+  projects: any; //ProjectsListProps;
+  skills: SkillsProps;
 }
+
+//START TEST
+// type ProjectsListProps = {
+//   projects?: Array<Project>;
+// };
+
+// type Project = {
+//   id: string;
+//   title: String;
+//   githubUrl: String;
+//   liveUrl?: String;
+//   image?: {
+//     id: string;
+//     imageAlt: String;
+//     thumbnailUrl?: String;
+//     imagePreviewUrl?: String;
+//   };
+//   description?: String;
+//   language: String;
+//   frontendStackDetails: String;
+//   backendStackDetails: String;
+//   mobileStackDetails: String;
+//   publishedDate: Date;
+//   stacks?: {
+//     id: string;
+//     name: String;
+//   }[];
+// };
+/////END TEST
+
+interface SkillsProps {
+  detailedSkills?: Array<DetailedSkill>;
+  languageSkills?: Array<LanguageSkill>;
+  otherSkills?: Array<OtherSkill>;
+}
+
+type DetailedSkill = {
+  id: string;
+  name: string;
+  icon: string;
+  color: string;
+};
+
+type LanguageSkill = {
+  id: string;
+  name: string;
+  icon: string;
+  color: string;
+};
+
+type OtherSkill = {
+  id: string;
+  name: string;
+  icon: string;
+  color: string;
+};
 
 export default function Index({ projects, skills }: PortfolioProps) {
   function scrollTop() {
