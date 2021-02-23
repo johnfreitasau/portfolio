@@ -15,86 +15,68 @@ import { About } from '../components/About';
 import { Skills } from '../components/Skills';
 import { getProjects } from '../graphql/queries/getProjects';
 import { getSkills } from '../graphql/queries/getSkills';
-// import { ProjectsListProps } from '../components/ProjectsList/types';
-// import { SkillsProps } from '../components/skills/types';
-
-// import { Skill } from '../graphql/schema';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
-    filter: brightness(1);
-    /* opacity: 1; */
+    opacity: 1;
   }
 
   33.333%, 83.333% {
-    /* opacity: 0; */
-    filter: brightness(0);
+    opacity: 0.2;
   }
 `;
 
 const animatedGradientTitle2 = keyframes`
 	0%, 16.667%, 66.667%, 100% {
-    /* opacity:0; */
-    filter: brightness(0);
+    opacity:0.2;
   }
 
 	33.333%, 50% {
-    /* opacity:1; */
-    filter: brightness(1);
+    opacity:1;
 	}
 `;
 
 const animatedGradientTitle3 = keyframes`
 	0%, 50%, 100% {
-		filter: brightness(0);
-    /* opacity: 0; */
+    opacity: 0.2;
 	}
 
 	66.667%, 83.333% {
-		filter: brightness(1);
-    /* opacity: 1; */
+    opacity: 1;
 	}
 `;
 
 interface PortfolioProps {
-  projects: any; //ProjectsListProps;
-  skills: SkillsProps;
+  projects: Array<Project>;
+  skills: {
+    detailedSkills?: Array<DetailedSkill>;
+    languageSkills?: Array<LanguageSkill>;
+    otherSkills?: Array<OtherSkill>;
+  };
 }
 
-//START TEST
-// type ProjectsListProps = {
-//   projects?: Array<Project>;
-// };
-
-// type Project = {
-//   id: string;
-//   title: String;
-//   githubUrl: String;
-//   liveUrl?: String;
-//   image?: {
-//     id: string;
-//     imageAlt: String;
-//     thumbnailUrl?: String;
-//     imagePreviewUrl?: String;
-//   };
-//   description?: String;
-//   language: String;
-//   frontendStackDetails: String;
-//   backendStackDetails: String;
-//   mobileStackDetails: String;
-//   publishedDate: Date;
-//   stacks?: {
-//     id: string;
-//     name: String;
-//   }[];
-// };
-/////END TEST
-
-interface SkillsProps {
-  detailedSkills?: Array<DetailedSkill>;
-  languageSkills?: Array<LanguageSkill>;
-  otherSkills?: Array<OtherSkill>;
-}
+type Project = {
+  id: string;
+  title: String;
+  githubUrl: String;
+  liveUrl?: String;
+  image?: {
+    id: string;
+    imageAlt: String;
+    thumbnailUrl?: String;
+    imagePreviewUrl?: String;
+  };
+  description?: String;
+  language: String;
+  frontendStackDetails: String;
+  backendStackDetails: String;
+  mobileStackDetails: String;
+  publishedDate: Date;
+  stacks?: {
+    id: string;
+    name: String;
+  }[];
+};
 
 type DetailedSkill = {
   id: string;
@@ -126,15 +108,15 @@ export default function Index({ projects, skills }: PortfolioProps) {
 
   const heading1Animation = prefersReducedMotion
     ? undefined
-    : `${animatedGradientTitle1} 7s ease-in-out infinite`;
+    : `${animatedGradientTitle1} 10s ease-in-out infinite`;
 
   const heading2Animation = prefersReducedMotion
     ? undefined
-    : `${animatedGradientTitle2} 7s ease-in-out infinite`;
+    : `${animatedGradientTitle2} 10s ease-in-out infinite`;
 
   const heading3Animation = prefersReducedMotion
     ? undefined
-    : `${animatedGradientTitle3} 7s ease-in-out infinite`;
+    : `${animatedGradientTitle3} 10s ease-in-out infinite`;
 
   return (
     <Container id="home">
@@ -186,7 +168,6 @@ export default function Index({ projects, skills }: PortfolioProps) {
             fontWeight="bold"
             letterSpacing="-.06em"
             animation={heading3Animation}
-            // textAlign="right"
             isTruncated
           >
             I'm John.

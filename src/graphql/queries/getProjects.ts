@@ -7,18 +7,16 @@ const GET_PROJECTS_QUERY = gql`
   query projects {
     projects(orderBy: publishedDate_DESC) {
       id
-      liveUrl
-      publishedAt
-      stage
       title
       githubUrl
-      description
+      liveUrl
       image
-      publishedDate
+      description
       language
       frontendStackDetails
       backendStackDetails
       mobileStackDetails
+      publishedDate
       stacks {
         id
         name
