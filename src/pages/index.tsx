@@ -6,6 +6,8 @@ import {
   usePrefersReducedMotion,
 } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
+import { SEO } from '../components/SEO';
+
 import { CTA } from '../components/CTA';
 import { Container } from '../components/Layout/Container';
 import { ProjectsList } from '../components/ProjectsList';
@@ -114,56 +116,59 @@ export default function Index({ projects, skills }: PortfolioProps) {
     : `${animatedGradientTitle3} 10s ease-in-out infinite`;
 
   return (
-    <Container id="home">
-      <ScrollTopButton />
+    <>
+      <SEO title="John Freitas" image="boost.png" />
+      <Container id="home">
+        <ScrollTopButton />
 
-      <Flex direction="column">
-        <Stack alignItems="center" mt="4rem">
-          <Heading
-            bgGradient="linear(90deg, #007Cf0,#00DFD8)"
-            bgClip="text"
-            fontSize={['19vw', '8rem', '10rem']}
-            lineHeight="1"
-            fontWeight="bold"
-            letterSpacing="-.06em"
-            animation={heading1Animation}
-          >
-            Hello.
-          </Heading>
-          <Heading
-            bgGradient="linear(90deg,#7928CA,#FF0080)"
-            bgClip="text"
-            fontSize={['19vw', '8rem', '10rem']}
-            lineHeight="1"
-            fontWeight="bold"
-            letterSpacing="-.06em"
-            animation={heading2Animation}
-          >
-            Welcome.
-          </Heading>
-          <Heading
-            bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
-            bgClip="text"
-            fontSize={['19vw', '8rem', '10rem']}
-            lineHeight="1"
-            fontWeight="bold"
-            letterSpacing="-.06em"
-            animation={heading3Animation}
-            isTruncated
-          >
-            I'm John.
-          </Heading>
-          <CTA />
-        </Stack>
-        <About />
+        <Flex direction="column">
+          <Stack alignItems="center" mt="4rem">
+            <Heading
+              bgGradient="linear(90deg, #007Cf0,#00DFD8)"
+              bgClip="text"
+              fontSize={['19vw', '8rem', '10rem']}
+              lineHeight="1"
+              fontWeight="bold"
+              letterSpacing="-.06em"
+              animation={heading1Animation}
+            >
+              Hello.
+            </Heading>
+            <Heading
+              bgGradient="linear(90deg,#7928CA,#FF0080)"
+              bgClip="text"
+              fontSize={['19vw', '8rem', '10rem']}
+              lineHeight="1"
+              fontWeight="bold"
+              letterSpacing="-.06em"
+              animation={heading2Animation}
+            >
+              Welcome.
+            </Heading>
+            <Heading
+              bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
+              bgClip="text"
+              fontSize={['19vw', '8rem', '10rem']}
+              lineHeight="1"
+              fontWeight="bold"
+              letterSpacing="-.06em"
+              animation={heading3Animation}
+              isTruncated
+            >
+              I'm John.
+            </Heading>
+            <CTA />
+          </Stack>
+          <About />
 
-        <Skills skills={skills} />
+          <Skills skills={skills} />
 
-        <Container id="projects" justifyContent="center" paddingTop={20}>
-          <ProjectsList projects={projects} />
-        </Container>
-      </Flex>
-    </Container>
+          <Container id="projects" justifyContent="center" paddingTop={20}>
+            <ProjectsList projects={projects} />
+          </Container>
+        </Flex>
+      </Container>
+    </>
   );
 }
 
