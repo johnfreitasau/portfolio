@@ -9,6 +9,7 @@ export const CTA = () => (
     display="flex"
     justifyContent="center"
     justifyItems="center"
+    marginBottom="7rem"
   >
     <Link
       href="#about"

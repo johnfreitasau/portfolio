@@ -1,6 +1,4 @@
-import { ChevronUpIcon } from '@chakra-ui/icons';
 import {
-  Button,
   Flex,
   Heading,
   keyframes,
@@ -15,6 +13,7 @@ import { About } from '../components/About';
 import { Skills } from '../components/Skills';
 import { getProjects } from '../graphql/queries/getProjects';
 import { getSkills } from '../graphql/queries/getSkills';
+import { ScrollTopButton } from '../components/Base/ScrollTopButton';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -100,10 +99,6 @@ type OtherSkill = {
 };
 
 export default function Index({ projects, skills }: PortfolioProps) {
-  function scrollTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const heading1Animation = prefersReducedMotion
@@ -120,24 +115,10 @@ export default function Index({ projects, skills }: PortfolioProps) {
 
   return (
     <Container id="home">
-      <Button
-        position="fixed"
-        h="45px"
-        w="45px"
-        right="50px"
-        bottom="50px"
-        borderRadius="6px"
-        cursor="pointer"
-        transition="all 0.3s ease"
-        opacity=".7"
-        onClick={scrollTop}
-        z-index={1}
-      >
-        <ChevronUpIcon />
-      </Button>
+      <ScrollTopButton />
 
       <Flex direction="column">
-        <Stack alignItems="center" marginTop=".10rem">
+        <Stack alignItems="center" mt="4rem">
           <Heading
             bgGradient="linear(90deg, #007Cf0,#00DFD8)"
             bgClip="text"

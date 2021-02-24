@@ -9,11 +9,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 
-import {
-  HamburgerIcon,
-  ChevronRightIcon,
-  SmallCloseIcon,
-} from '@chakra-ui/icons';
+import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons';
 
 import { navigationItems } from '../../../constants/navigation';
 import { Link } from '@chakra-ui/react';
@@ -55,9 +51,7 @@ export function HeaderNavigation() {
                     _hover={{ textDecoration: 'none' }}
                     key={name}
                   >
-                    <MenuItem value={name}>
-                      <ChevronRightIcon /> {name}
-                    </MenuItem>
+                    <MenuItem value={name}>{name}</MenuItem>
                   </Link>
                 ))}
               </MenuOptionGroup>

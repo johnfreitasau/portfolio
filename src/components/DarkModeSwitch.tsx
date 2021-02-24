@@ -7,7 +7,7 @@ export const DarkModeSwitch = () => {
     <Button
       top=".725rem"
       right="1rem"
-      isChecked={isDark}
+      ischecked={isDark ? 'true' : 'false'}
       onClick={toggleColorMode}
     >
       {isDark ? <MoonIcon /> : <SunIcon />}
