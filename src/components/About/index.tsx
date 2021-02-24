@@ -32,7 +32,6 @@ export function About() {
         p={4}
         display={{ md: 'flex' }}
         alignItems="center"
-        // borderRadius="xl"
         overflow="hidden"
         boxShadow="2xl"
         rounded="md"
