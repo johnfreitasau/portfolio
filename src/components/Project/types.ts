@@ -2,13 +2,13 @@ export type ProjectProps = {
   project: {
     id: String;
     title: String;
-    githubUrl: String;
-    liveUrl?: String;
+    githubUrl?: string;
+    liveUrl?: string;
     image?: {
-      id: any;
-      imageAlt: any;
-      thumbnailUrl?: any;
-      imagePreviewUrl?: any;
+      id: string;
+      imageAlt: string;
+      thumbnailUrl?: string;
+      imagePreviewUrl?: string;
     };
     description?: String;
     language: String;

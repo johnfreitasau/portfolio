@@ -13,7 +13,7 @@ import {
   Badge,
 } from '@chakra-ui/react';
 import { useMemo } from 'react';
-import { ImGithub } from 'react-icons/im';
+import { ImGithub, ImLink } from 'react-icons/im';
 import { SiTypescript, SiJavascript } from 'react-icons/si';
 
 type ProjectModalProps = {
@@ -26,13 +26,13 @@ type ProjectModalProps = {
 type ProjectProps = {
   id: String;
   title: String;
-  githubUrl?: any;
-  liveUrl?: String;
+  githubUrl?: string;
+  liveUrl?: string;
   image?: {
-    id: any;
-    imageAlt: any;
-    thumbnailUrl?: any;
-    imagePreviewUrl?: any;
+    id: string;
+    imageAlt: string;
+    thumbnailUrl?: string;
+    imagePreviewUrl?: string;
   };
   description?: String;
   language: String;
@@ -76,11 +76,13 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
           <VStack mb="1rem">
             <Text marginBottom="1rem">{project.description}</Text>
 
-            <Image
-              src={project.image?.imagePreviewUrl}
-              alt={project.image?.imageAlt}
-              width="19rem"
-            />
+            {project.image.imagePreviewUrl && (
+              <Image
+                src={project.image.imagePreviewUrl}
+                alt={project.image.imageAlt}
+                width="19rem"
+              />
+            )}
             {frontendStackDetails && <b>Frontend</b>}
             <Box>
               {frontendStackDetails?.map((frontendStackDetail) => (
@@ -135,13 +137,28 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
               {project.language === 'TypeScript' && <SiTypescript size={35} />}
               {project.language === 'JavaScript' && <SiJavascript size={35} />}
             </VStack>
+            {project.liveUrl && (
+              <>
+                <Text>
+                  <b>Live Url</b>
+                </Text>
 
-            <Text>
-              <b>Find out more about this project at</b>
-            </Text>
-            <Link href={project.githubUrl} isExternal>
-              <ImGithub size={25} />
-            </Link>
+                <Link href={project.liveUrl} isExternal>
+                  <ImLink size={25} />
+                </Link>
+              </>
+            )}
+            {project.githubUrl && (
+              <>
+                <Text>
+                  <b>Find out more about this project at</b>
+                </Text>
+
+                <Link href={project.githubUrl} isExternal>
+                  <ImGithub size={25} />
+                </Link>
+              </>
+            )}
           </VStack>
         </ModalBody>
       </ModalContent>

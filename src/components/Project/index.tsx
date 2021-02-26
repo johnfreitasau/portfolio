@@ -6,6 +6,7 @@ import {
   Wrap,
   WrapItem,
   HStack,
+  Center,
 } from '@chakra-ui/react';
 import { isThisYear } from 'date-fns';
 import { useMemo } from 'react';
@@ -25,6 +26,7 @@ export function Project({ project }: ProjectProps) {
         <ProjectModal isOpen={isOpen} onClose={onClose} project={project} />
         <Box
           maxW="sm"
+          height="22rem"
           overflow="hidden"
           boxShadow="2xl"
           rounded="xl"
@@ -35,13 +37,17 @@ export function Project({ project }: ProjectProps) {
           transition="all 0.3s ease"
           opacity="0.8"
         >
-          <Image
-            src={project.image?.thumbnailUrl}
-            alt={project.image?.imageAlt}
-            transition="0.5s"
-            margin="auto"
-            display="block"
-          />
+          <Box width="100%" height="35%" position="relative" overflow="hidden">
+            <Center>
+              <Image
+                src={project.image?.thumbnailUrl}
+                alt={project.image?.imageAlt}
+                position="absolute"
+                display="block"
+                top="0"
+              />
+            </Center>
+          </Box>
           <Box p="6">
             <Box
               mt="1"

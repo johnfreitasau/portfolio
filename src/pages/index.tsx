@@ -59,13 +59,13 @@ interface PortfolioProps {
 type Project = {
   id: string;
   title: String;
-  githubUrl: String;
-  liveUrl?: String;
+  githubUrl: string;
+  liveUrl?: string;
   image?: {
     id: string;
-    imageAlt: String;
-    thumbnailUrl?: String;
-    imagePreviewUrl?: String;
+    imageAlt: string;
+    thumbnailUrl?: string;
+    imagePreviewUrl?: string;
   };
   description?: String;
   language: String;
