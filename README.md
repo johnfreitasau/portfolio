@@ -1,6 +1,6 @@
-<h1 align="center">
-  <img src=".github/images/porfolio-thumbnail.PNG" alt="My Portfolio">
-</h1>
+<p align="center">
+  <img src=".github/images/jf-logo.png" alt=".jf logo" />
+</p>
 
 <h3 align="center">
   My Portfolio created with NextJS and GraphQL.
@@ -29,7 +29,7 @@ Chakra UI | GraphQL CMS</h4>
 </p>
 
 <p align="center">
-   <img src="./.github/images/portfolio_demo1.gif" width="500"/>
+  <img src=".github/images/porfolio-thumbnail.PNG" alt="My Portfolio" width="500" />
 </p>
 
 ### :rocket: My Portfolio is now live at: [Portfolio](https://portfolio-johnfreitasau.vercel.app/)
