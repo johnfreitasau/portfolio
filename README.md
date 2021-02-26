@@ -57,6 +57,8 @@ Chakra UI | GraphQL CMS</h4>
 * Projects section
 * Project details Modals
 
+# :construction_worker: installation
+* [installation](#construction_worker-installation)
 
 **Install dependencies**
 
