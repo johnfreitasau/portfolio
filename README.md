@@ -32,8 +32,9 @@ Chakra UI | GraphQL CMS</h4>
   <img src=".github/images/porfolio-thumbnail.PNG" alt="My Portfolio" width="500" />
 </p>
 
-### :rocket: My Portfolio is now live at: [Portfolio](https://portfolio-johnfreitasau.vercel.app/)
-
+<h3 align="center">
+ My Portfolio is now live at: [Portfolio](https://portfolio-johnfreitasau.vercel.app/)
+</h3>
 
 
 # :rocket: Technologies
