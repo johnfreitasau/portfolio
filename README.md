@@ -111,4 +111,4 @@ Check out the [contributing](https://github.com/johnfreitasau/portfolio/blob/mas
 
 # :closed_book: License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+See the [LICENSE](LICENSE) file for details.
