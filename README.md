@@ -13,18 +13,11 @@ Chakra UI | GraphQL CMS</h4>
   <a href="https://www.linkedin.com/in/johnfreitasau/"><img alt="Made by" src="https://img.shields.io/badge/made%20by-John%20Freitas-%2329B6D1"></a>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/johnfreitasau/portfolio?color=%2329B6D1">
   <a href="https://github.com/johnfreitasau/portfolio/commits/main"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/johnfreitasau/portfolio?color=%2329B6D1"></a>
-  <a href="https://github.com/johnfreitasau/portfolio/issues"><img alt="Repository issues" src="https://img.shields.io/github/issues/johnfreitasau/portfolio?color=%2329B6D1"></a>
-  <img alt="GitHub" src="https://img.shields.io/github/license/johnfreitasau/portfolio?color=%2329B6D2">
 </p>
 
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#star-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#construction_worker-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#runner-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#bug-issues">Found a bug? Missing a specific feature?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#tada-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#closed_book-license">License</a>
+  <a href="#star-features">Features</a>
 </p>
 
 <p align="center">
@@ -57,15 +50,6 @@ Chakra UI | GraphQL CMS</h4>
 * Project details Modals
 
 
-**The API**
-
 This project uses [GraphCMS](https://graphcms.com/) as a Headless CMS, which is a content management system that delivers content as data to any platform or device via API.
 
 The frontend interacts with the API to receive the Porfolio data and create the static pages using NextJS.
-
-
-**Acessing the GraphCMS API**
-
-Make sure to create an account in GraphCMS and create the model structure to fit the schema "graphql/schema.ts", so you will be able to populate the data on the CMS as you wish and receive the data successfully in GraphQL.
-
-To be able to access the GraphCMS API, you will need to get the API access URL under the Settings menu and populate it on your your .env.local. I have created a .env.local.example file as example.
