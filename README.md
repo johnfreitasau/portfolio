@@ -19,10 +19,9 @@ Chakra UI | GraphQL CMS</h4>
 
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#star-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#construction_worker-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#runner-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#postbox-faq">FAQ</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bug-issues">Found a bug? Missing a specific feature?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tada-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#closed_book-license">License</a>
@@ -51,7 +50,7 @@ Chakra UI | GraphQL CMS</h4>
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-# :rocket: Features
+# :star: Features
 
 * About section
 * Skills section
@@ -91,13 +90,6 @@ To be able to access the GraphCMS API, you will need to get the API access URL u
 Run the following command in order to start the application in a development environment:
 
 ```yarn dev```
-
-
-# :postbox: Faq
-
-**Question:** What are the tecnologies used in this project?
-
-**Answer:** The tecnologies used in this project are Next.js + Graphql + GraphQLCMS + TypeScript + Chakra UI.
 
 
 # :bug: Issues
