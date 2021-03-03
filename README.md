@@ -35,7 +35,6 @@ Chakra UI | GraphQL CMS</h4>
 #### Production: [Portfolio](https://portfolio-johnfreitasau.vercel.app/) 
 
 
-
 # :rocket: Technologies
 
 - [ReactJS](https://reactjs.org/)
@@ -57,19 +56,6 @@ Chakra UI | GraphQL CMS</h4>
 * Projects section
 * Project details Modals
 
-# :construction_worker: installation
-* [installation](#construction_worker-installation)
-
-**Install dependencies**
-
-```yarn install```
-
-Create your enviroment variables based on the examples of ```.env.example```
-
-```cp .env.example.local .env.local```
-
-After copying the examples, make sure to fill the variables with new values.
-
 
 **The API**
 
@@ -83,24 +69,3 @@ The frontend interacts with the API to receive the Porfolio data and create the 
 Make sure to create an account in GraphCMS and create the model structure to fit the schema "graphql/schema.ts", so you will be able to populate the data on the CMS as you wish and receive the data successfully in GraphQL.
 
 To be able to access the GraphCMS API, you will need to get the API access URL under the Settings menu and populate it on your your .env.local. I have created a .env.local.example file as example.
-
-
-# :runner: Getting Started
-
-Run the following command in order to start the application in a development environment:
-
-```yarn dev```
-
-
-# :bug: Issues
-
-Feel free to **file a new issue** with a respective title and description on the the [Porfolio](https://github.com/johnfreitasau/portfolio/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/johnfreitasau/portfolio/blob/main/CONTRIBUTING.md) to find out about the coding standards.
-
-# :tada: Contributing
-
-Check out the [contributing](https://github.com/johnfreitasau/portfolio/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
-
-
-# :closed_book: License
-
-See the [LICENSE](LICENSE) file for details.
