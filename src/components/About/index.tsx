@@ -1,12 +1,12 @@
 import {
-  VStack,
-  Heading,
   Box,
-  Image,
-  Text,
-  Link,
-  Collapse,
   Button,
+  Collapse,
+  Heading,
+  Image,
+  Link,
+  Text,
+  VStack,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { externalLinks } from '../../constants/externalLinks';
@@ -52,7 +52,7 @@ export function About() {
           </Text>
           <Text marginY=".700rem">
             My life in the development field started early when I was 16 years
-            old. I have delivered my first customer website at this age.
+            old. I delivered my first customer website at this age.
           </Text>
           <Text marginY=".700rem">
             As a programmer, I officially started my career in a consulting
@@ -66,8 +66,8 @@ export function About() {
             >
               BSI
             </Link>{' '}
-            to work on a project to restructure the Online Banking from the
-            largest private bank in Latin America called
+            working on a project restructuring Online Banking for the largest
+            private bank in Latin America called
             <Link
               color="cyan.600"
               fontWeight="700"
@@ -83,11 +83,10 @@ export function About() {
 
           <Text marginY=".700rem">
             After 5 months, right after we successfully completed the second
-            phase of the project, I was invited by this bank to join one of
-            their internal areas as Systems analyst. I initially developed in
-            Java and I got a lot of experience along the way working on
-            different technologies, projects and systems departments for 7
-            years.
+            phase of the project, I was invited by Itau to join one of their
+            internal areas as Systems analyst. I initially developed in Java and
+            I got a lot of experience along the way working on different
+            technologies, projects and systems departments for 7 years.
           </Text>
           <Text fontWeight={600} fontSize="20px" marginTop="2rem">
             The change
@@ -111,7 +110,7 @@ export function About() {
               >
                 Harbour IT
               </Link>{' '}
-              as a Systems engineer, then{' '}
+              as a Systems engineer. Then{' '}
               <Link
                 color="cyan.600"
                 fontWeight="700"
@@ -121,15 +120,15 @@ export function About() {
               >
                 Canon Group
               </Link>{' '}
-              bought this company after a couple of years and today I have been
-              working for the Canon as a Senior Systems Engineer. It's been 6
-              years working for this company now.
+              bought the company after a couple of years and now I work for
+              Canon as a Senior Systems engineer. I have been working for this
+              company for 6 years now.
             </Text>
             <Text marginY=".700rem">
-              At Canon, I don't work as much as I used to with development,
-              however this is something that I am still passionate about and
-              work on it as a daily basis, creating projects and contributing to
-              the open source community.
+              Although I do not work with development as much as I used to in my
+              current job, it is an area I am still passionate about and I work
+              on it on a daily basis through creating projects and contributing
+              to the open source community.
             </Text>
           </Collapse>
           <VStack>
