@@ -24,7 +24,7 @@ export function Header() {
           <HeaderNavigation />
         </Flex>
         <Box>
-          {/* <ResumeButton /> */}
+          <ResumeButton />
           <DarkModeSwitch />
         </Box>
       </HStack>

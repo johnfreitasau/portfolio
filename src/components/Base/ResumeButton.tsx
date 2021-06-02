@@ -7,6 +7,7 @@ export const ResumeButton = () => {
       leftIcon={<DownloadIcon />}
       marginX="0.5rem"
       right="1rem"
+      disabled
     >
       Resume
     </Button>
