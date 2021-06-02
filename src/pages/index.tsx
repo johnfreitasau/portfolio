@@ -118,11 +118,11 @@ export default function Index({ projects, skills }: PortfolioProps) {
   return (
     <>
       <SEO title="John Freitas" image="boost.png" />
-      <Container id="home">
+      <Container>
         <ScrollTopButton />
 
         <Flex direction="column">
-          <Stack alignItems="center" mt="4rem">
+          <Stack alignItems="center" mt="10">
             <Heading
               bgGradient="linear(90deg, #007Cf0,#00DFD8)"
               bgClip="text"
