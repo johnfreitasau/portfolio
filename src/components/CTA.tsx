@@ -1,6 +1,5 @@
-import { Link, Button } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-
+import { Button, Link } from '@chakra-ui/react';
 import { Container } from './Layout/Container';
 
 export const CTA = () => (
@@ -29,7 +28,7 @@ export const CTA = () => (
           borderRadius: '50%',
         }}
       >
-        Discover more
+        Know more
         <ArrowForwardIcon />
       </Button>
     </Link>

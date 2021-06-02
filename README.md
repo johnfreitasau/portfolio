@@ -5,7 +5,7 @@
 <h3 align="center">
   My Portfolio created with NextJS and GraphQL.
 </h3>
-<h4 align="center">Next.js | Graphql | 
+<h4 align="center">Next.js | Graphql |
 Chakra UI | GraphQL CMS</h4>
 <!-- E02041 -->
 <p align="center">
@@ -24,16 +24,14 @@ Chakra UI | GraphQL CMS</h4>
   <img src=".github/images/porfolio-thumbnail.PNG" alt="My Portfolio" width="500" />
 </p>
 
-
-#### Production: [Portfolio](https://portfolio-johnfreitasau.vercel.app/) 
-
+#### Production: [Portfolio](https://portfolio-johnfreitasau.vercel.app/)
 
 # :rocket: Technologies
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/) ❤️
-- [Chakra UI](https://chakra-ui.com/) 
+- [Chakra UI](https://chakra-ui.com/)
 - [GraphQL](https://graphql.org/)
 - [GraphQL Request](https://www.npmjs.com/package/graphql-request)
 - [GraphCMS](https://graphcms.com/)
@@ -44,11 +42,10 @@ Chakra UI | GraphQL CMS</h4>
 
 # :star: Features
 
-* About section
-* Skills section
-* Projects section
-* Project details Modals
-
+- About section
+- Skills section
+- Projects section
+- Project details Modals
 
 This project uses [GraphCMS](https://graphcms.com/) as a Headless CMS, which is a content management system that delivers content as data to any platform or device via API.
 

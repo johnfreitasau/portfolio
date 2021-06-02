@@ -1,16 +1,16 @@
 import {
   Box,
+  Center,
   Heading,
   Link,
   Text,
   VStack,
   Wrap,
   WrapItem,
-  Center,
 } from '@chakra-ui/react';
 import { Express } from '@styled-icons/simple-icons/Express';
+import { externalLinks } from 'constants/externalLinks';
 import React from 'react';
-import { externalLinks } from '../../constants/externalLinks';
 import { CustomBox } from './CustomBox';
 import { SkillsProps } from './types';
 
@@ -79,7 +79,7 @@ export function Skills({ skills }: SkillsProps) {
         textAlign="center"
         paddingTop="3rem"
       >
-        MOST USED STACKS
+        MOST USED TECH STACK
       </Text>
 
       <Wrap justify="center">
@@ -127,7 +127,7 @@ export function Skills({ skills }: SkillsProps) {
         textAlign="center"
         paddingTop="3rem"
       >
-        FAVORITE LANGUAGES
+        MOST USED LANGUAGES
       </Text>
 
       <Wrap justify="center">

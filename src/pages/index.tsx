@@ -4,18 +4,18 @@ import {
   keyframes,
   Stack,
   usePrefersReducedMotion,
+  Text,
 } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
-import { SEO } from '../components/SEO';
-
+import { About } from '../components/About';
+import { ScrollTopButton } from '../components/Base/ScrollTopButton';
 import { CTA } from '../components/CTA';
 import { Container } from '../components/Layout/Container';
 import { ProjectsList } from '../components/ProjectsList';
-import { About } from '../components/About';
+import { SEO } from '../components/SEO';
 import { Skills } from '../components/Skills';
 import { getProjects } from '../graphql/queries/getProjects';
 import { getSkills } from '../graphql/queries/getSkills';
-import { ScrollTopButton } from '../components/Base/ScrollTopButton';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -126,37 +126,50 @@ export default function Index({ projects, skills }: PortfolioProps) {
             <Heading
               bgGradient="linear(90deg, #007Cf0,#00DFD8)"
               bgClip="text"
-              fontSize={['19vw', '8rem', '10rem']}
+              fontSize={['19vw', '6rem', '7rem']}
               lineHeight="1"
               fontWeight="bold"
-              letterSpacing="-.06em"
+              letterSpacing="-.11em"
+              px="2"
               animation={heading1Animation}
             >
-              Hello.
+              Hi there
             </Heading>
             <Heading
               bgGradient="linear(90deg,#7928CA,#FF0080)"
               bgClip="text"
-              fontSize={['19vw', '8rem', '10rem']}
+              fontSize={['19vw', '6rem', '7rem']}
               lineHeight="1"
               fontWeight="bold"
-              letterSpacing="-.06em"
+              letterSpacing="-.11em"
+              px="2"
               animation={heading2Animation}
             >
-              Welcome.
+              Welcome
             </Heading>
             <Heading
               bgGradient="linear(90deg, #ff4d4d,#f9cb28)"
               bgClip="text"
-              fontSize={['19vw', '8rem', '10rem']}
-              lineHeight="1"
+              fontSize={['19vw', '6rem', '7rem']}
               fontWeight="bold"
-              letterSpacing="-.06em"
+              letterSpacing="-.11em"
+              px="2"
               animation={heading3Animation}
               isTruncated
+              marginY="4rem"
             >
-              I'm John.
+              I'm John
             </Heading>
+            <Text
+              textColor="black"
+              fontSize={['5vw', '2rem', '2rem']}
+              fontWeight="normal"
+              letterSpacing="-.06em"
+              isTruncated
+              marginY="4rem"
+            >
+              I'm a Software Engineer
+            </Text>
             <CTA />
           </Stack>
           <About />

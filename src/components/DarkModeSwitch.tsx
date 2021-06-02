@@ -5,7 +5,6 @@ export const DarkModeSwitch = () => {
   const isDark = colorMode === 'dark';
   return (
     <Button
-      top=".725rem"
       right="1rem"
       ischecked={isDark ? 'true' : 'false'}
       onClick={toggleColorMode}

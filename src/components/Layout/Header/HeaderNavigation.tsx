@@ -21,7 +21,9 @@ export function HeaderNavigation() {
         as="ul"
         spacing={4}
         css={{ listStyle: 'none' }}
-        display={['none', null, 'flex']}
+        display={['none', 'none', 'flex']}
+        ml="auto"
+        mr="1rem"
       >
         {navigationItems.map(({ name, href }) => (
           <li key={name}>
@@ -31,14 +33,13 @@ export function HeaderNavigation() {
           </li>
         ))}
       </HStack>
-
       <Menu closeOnSelect={false}>
         {({ isOpen }) => (
           <>
             <MenuButton
               as={Button}
               colorScheme="gray"
-              display={['flex', null, 'none']}
+              display={[null, null, 'none']}
             >
               {isOpen ? <SmallCloseIcon boxSize="1em" /> : <HamburgerIcon />}
             </MenuButton>
@@ -50,6 +51,7 @@ export function HeaderNavigation() {
                     href={href}
                     _hover={{ textDecoration: 'none' }}
                     key={name}
+                    textDecoration="none"
                   >
                     <MenuItem value={name}>{name}</MenuItem>
                   </Link>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Heading, Flex } from '@chakra-ui/react';
+import { Box, Heading, Flex, HStack } from '@chakra-ui/react';
 import { HeaderNavigation } from './HeaderNavigation';
 import { DarkModeSwitch } from '../../DarkModeSwitch';
+import { ResumeButton } from '../../Base/ResumeButton';
 export function Header() {
   return (
     <Flex
@@ -13,24 +14,20 @@ export function Header() {
       position="sticky"
       height="64px"
     >
-      <Box borderBottomWidth={1} display="flex" width="full">
+      <HStack borderBottomWidth={1} width="full">
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" pl={3} letterSpacing={'-.2rem'}>
             .jf
           </Heading>
         </Flex>
-        <Box
-          display={{ md: 'flex' }}
-          flexGrow={1}
-          justifyContent="center"
-          alignSelf="center"
-        >
+        <Flex flexGrow={1}>
           <HeaderNavigation />
-        </Box>
+        </Flex>
         <Box>
+          {/* <ResumeButton /> */}
           <DarkModeSwitch />
         </Box>
-      </Box>
+      </HStack>
     </Flex>
   );
 }
