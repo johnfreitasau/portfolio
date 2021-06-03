@@ -5,6 +5,7 @@ import {
   Stack,
   usePrefersReducedMotion,
   Text,
+  Box,
 } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { About } from '../components/About';
@@ -16,6 +17,7 @@ import { SEO } from '../components/SEO';
 import { Skills } from '../components/Skills';
 import { getProjects } from '../graphql/queries/getProjects';
 import { getSkills } from '../graphql/queries/getSkills';
+import { HiLocationMarker } from 'react-icons/hi';
 
 const animatedGradientTitle1 = keyframes`
   0%, 16.667%, 100% {
@@ -122,7 +124,7 @@ export default function Index({ projects, skills }: PortfolioProps) {
         <ScrollTopButton />
 
         <Flex direction="column">
-          <Stack alignItems="center" mt="10">
+          <Stack alignItems="center" my="10">
             <Heading
               bgGradient="linear(90deg, #007Cf0,#00DFD8)"
               bgClip="text"
@@ -156,22 +158,33 @@ export default function Index({ projects, skills }: PortfolioProps) {
               px="2"
               animation={heading3Animation}
               isTruncated
-              marginY="4rem"
             >
               I'm John
             </Heading>
             <Text
-              textColor="black"
-              fontSize={['5vw', '2rem', '2rem']}
+              textColor="gray.500"
+              fontSize={['5vw', '1rem', '2rem']}
+              fontWeight="normal"
+              letterSpacing="-.06em"
+            >
+              Software Engineer | Systems Engineer
+            </Text>
+            <Text
+              textColor="gray.500"
+              fontSize={['5vw', '1rem', '1rem']}
               fontWeight="normal"
               letterSpacing="-.06em"
               isTruncated
-              marginY="4rem"
+              mt="2rem"
             >
-              I'm a Software Engineer
+              <Box align="center" mb="2rem">
+                <Text>
+                  <HiLocationMarker /> Sydney - AU
+                </Text>
+              </Box>
             </Text>
-            <CTA />
           </Stack>
+          <CTA />
           <About />
 
           <Skills skills={skills} />
