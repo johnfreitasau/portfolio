@@ -55,7 +55,7 @@ export function About() {
             old. I delivered my first customer website at this age.
           </Text>
           <Text marginY=".700rem">
-            As a programmer, I officially started my career in a consulting
+            As a developer, I officially started my career in a consulting
             company called{' '}
             <Link
               color="cyan.600"
@@ -86,17 +86,18 @@ export function About() {
             phase of the project, I was invited by Itau to join one of their
             internal areas as Systems analyst. I initially developed in Java and
             I got a lot of experience along the way working on different
-            technologies, projects and systems departments for 7 years.
+            technologies, projects and systems departments over 6 years.
           </Text>
           <Text fontWeight={600} fontSize="20px" marginTop="2rem">
             The change
           </Text>
           <Collapse startingHeight={30} in={show}>
             <Text marginY=".700rem">
-              After 7 years at Itau, I decided that I wanted to experience a
-              life outside my country and I moved to Sydney - Australia, where I
-              met my wife and I had to make the big decision to live in this
-              country permanently.
+              After a long time working at Itau, I made the hard decision to
+              leave my country temporarily to study overseas and have a new life
+              experience. I moved to Sydney, where I met my wife and had to make
+              another hard decision which was to live in this country
+              permanently.
             </Text>
             <Text marginY=".700rem">
               My career in IT continued in Sydney. I started in a Cloud Managed
@@ -122,13 +123,13 @@ export function About() {
               </Link>{' '}
               bought the company after a couple of years and now I work for
               Canon as a Senior Systems engineer. I have been working for this
-              company for 6 years now.
+              company for over 6 years now.
             </Text>
             <Text marginY=".700rem">
-              Although I do not work with development as much as I used to in my
-              current job, it is an area I am still passionate about and I work
-              on it on a daily basis through creating projects and contributing
-              to the open source community.
+              Although I do not work with software development as much as I used
+              to in my current job, it is an area I am still passionate about
+              and I work on it on a daily basis through creating projects and
+              contributing to the open source community.
             </Text>
           </Collapse>
           <VStack>

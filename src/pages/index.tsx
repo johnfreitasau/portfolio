@@ -177,10 +177,15 @@ export default function Index({ projects, skills }: PortfolioProps) {
               isTruncated
               mt="2rem"
             >
-              <Box align="center" mb="2rem">
-                <Text>
-                  <HiLocationMarker /> Sydney - AU
-                </Text>
+              <Box
+                align="center"
+                mb="2rem"
+                display="inline-flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <HiLocationMarker />
+                <Text>&nbsp;Sydney, AU</Text>
               </Box>
             </Text>
           </Stack>

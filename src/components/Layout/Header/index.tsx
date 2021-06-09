@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading, Flex, HStack } from '@chakra-ui/react';
 import { HeaderNavigation } from './HeaderNavigation';
 import { DarkModeSwitch } from '../../DarkModeSwitch';
-import { ResumeButton } from '../../Base/ResumeButton';
+// import { ResumeButton } from '../../Base/ResumeButton';
 export function Header() {
   return (
     <Flex
@@ -24,7 +24,7 @@ export function Header() {
           <HeaderNavigation />
         </Flex>
         <Box>
-          <ResumeButton />
+          {/* <ResumeButton /> */}
           <DarkModeSwitch />
         </Box>
       </HStack>

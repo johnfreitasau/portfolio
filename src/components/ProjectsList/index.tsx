@@ -13,11 +13,12 @@ export function ProjectsList({ projects }: ProjectsListProps) {
         as="h4"
         textAlign="center"
       >
-        Some Projects
+        GitHub Projects
       </Heading>
       <Text lineHeight="1.6" letterSpacing="-.02em" fontWeight="300">
-        In this session you will find some of my projects shared on Github.
-        Please, stop by and you will find much more: 😃
+        Here you will find some of my projects that I developed and are
+        currently available on GitHub. This portfolio is also part of one of the
+        projects I have been working on. 😃
       </Text>
       <SimpleGrid columns={[1, null, 2]} spacing={10} width="full">
         {projects.map((project) => (
