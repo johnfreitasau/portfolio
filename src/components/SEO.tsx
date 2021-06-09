@@ -50,7 +50,7 @@ export function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@johnfreitas" />
       <meta name="twitter:creator" content="@johnfreitas" />
-      <meta name="twitter:image" content={title} />
+      <meta name="twitter:image" content={image} />
       <meta name="twitter:image:src" content={title} />
       <meta name="twitter:image:alt" content="Thumbnail" />
       <meta name="twitter:image:width" content="1200" />

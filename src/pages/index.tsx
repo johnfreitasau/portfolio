@@ -120,7 +120,7 @@ export default function Index({ projects, skills }: PortfolioProps) {
   return (
     <>
       <SEO
-        title="John Freitas"
+        title="John Freitas - Portfolio"
         description="A Software Engineer who is passionate about software architecture and design."
         image="/images/banner.png"
       />
