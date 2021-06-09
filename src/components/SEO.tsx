@@ -39,7 +39,7 @@ export function SEO({
       <meta property="og:locale" content="en_AU" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={title} />
-      <meta property="og:image" content={title} />
+      <meta property="og:image" content={image} />
       <meta property="og:image:secure_url" content={title} />
       <meta property="og:image:alt" content="Thumbnail" />
       <meta property="og:image:type" content="image/png" />
