@@ -31,27 +31,15 @@ export type Project = {
   }[];
 };
 
+export type Skills = {
+  languageSkills: Skill;
+  frontendDevelopmentSkills: Skill;
+  backendDevelopmentSkills: Skill;
+  mobileDevelopmentSkills: Skill;
+  othersSkills: Skill;
+};
+
 export type Skill = {
-  ItemSkill: ItemSkill;
-  languageSkill: LanguageSkill;
-  otherSkill: OtherSkill;
-};
-
-export type ItemSkill = {
-  id: string;
-  name: string;
-  icon: string;
-  color: string;
-};
-
-export type LanguageSkill = {
-  id: string;
-  name: string;
-  icon: string;
-  color: string;
-};
-
-export type OtherSkill = {
   id: string;
   name: string;
   icon: string;

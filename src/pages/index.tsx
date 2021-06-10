@@ -195,9 +195,7 @@ export default function Index({ projects, skills }: PortfolioProps) {
           </Stack>
           <CTA />
           <About />
-
           <Skills skills={skills} />
-
           <Container id="projects" justifyContent="center" paddingTop={20}>
             <ProjectsList projects={projects} />
           </Container>

@@ -82,7 +82,7 @@ export function About() {
           </Text>
 
           <Text marginY=".700rem">
-            After 5 months, right after we successfully completed the second
+            After 5 months, right after we successfully completed the first
             phase of the project, I was invited by Itau to join one of their
             internal areas as Systems analyst. I initially developed in Java and
             I got a lot of experience along the way working on different

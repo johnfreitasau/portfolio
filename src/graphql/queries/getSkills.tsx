@@ -6,9 +6,11 @@ import { Skill } from '../schema';
 const GET_SKILLS_QUERY = gql`
   query skills {
     skills {
-      detailedSkills
       languageSkills
-      otherSkills
+      frontendDevelopmentSkills
+      backendDevelopmentSkills
+      mobileDevelopmentSkills
+      othersSkills
     }
   }
 `;
