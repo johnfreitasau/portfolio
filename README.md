@@ -30,7 +30,7 @@ Chakra UI | GraphQL CMS</h4>
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [NextJS](https://nextjs.org/) ❤️
+- [NextJS](https://nextjs.org/)
 - [Chakra UI](https://chakra-ui.com/)
 - [GraphQL](https://graphql.org/)
 - [GraphQL Request](https://www.npmjs.com/package/graphql-request)
